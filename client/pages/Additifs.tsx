@@ -128,17 +128,17 @@ export default function Additifs() {
       </section>
 
       {/* Category Navigation */}
-      <section className="bg-black text-white py-6">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-r from-gray-50 to-white py-8 border-b border-gray-200">
+        <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
               <Link
                 key={index}
                 to={category.path}
-                className={`px-6 py-2 border-2 transition-all duration-300 font-medium uppercase tracking-wide ${
+                className={`px-8 py-3 rounded-2xl border-2 transition-all duration-300 font-bold uppercase tracking-wide text-sm transform hover:-translate-y-1 ${
                   category.active
-                    ? "bg-cmca-red border-cmca-red text-white"
-                    : "border-white text-white hover:bg-white hover:text-black"
+                    ? "bg-[#BE941B] border-[#BE941B] text-white shadow-lg hover:shadow-xl"
+                    : "border-[#02173C] text-[#02173C] hover:bg-[#02173C] hover:text-white shadow-md hover:shadow-lg"
                 }`}
               >
                 {category.name}
