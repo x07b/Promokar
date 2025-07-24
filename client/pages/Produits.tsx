@@ -12,7 +12,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&q=80",
       description: "Additifs haute performance pour moteurs",
       color: "from-[#BE941B]/20 to-[#02173C]/10",
-      count: "45+ produits"
+
     },
     {
       title: "Automobile",
@@ -21,7 +21,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=400&q=80",
       description: "Lubrifiants automobiles professionnels",
       color: "from-[#02173C]/20 to-[#BE941B]/10",
-      count: "60+ produits"
+
     },
     {
       title: "Entretien",
@@ -30,7 +30,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=400&q=80",
       description: "Produits d'entretien et maintenance",
       color: "from-[#BE941B]/20 to-[#02173C]/10",
-      count: "35+ produits"
+
     },
     {
       title: "Moto",
@@ -39,7 +39,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&q=80", 
       description: "Huiles et lubrifiants moto",
       color: "from-[#02173C]/20 to-[#BE941B]/10",
-      count: "25+ produits"
+
     },
     {
       title: "Industrie",
@@ -48,7 +48,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=400&q=80",
       description: "Solutions industrielles avancées",
       color: "from-[#BE941B]/20 to-[#02173C]/10",
-      count: "80+ produits"
+
     },
     {
       title: "Marine",
@@ -57,7 +57,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80",
       description: "Lubrifiants marins spécialisés",
       color: "from-[#02173C]/20 to-[#BE941B]/10",
-      count: "20+ produits"
+
     }
   ];
 
@@ -181,12 +181,7 @@ export default function Produits() {
                         </div>
                       </div>
                       
-                      {/* Product Count */}
-                      <div className="absolute bottom-4 left-4">
-                        <div className="bg-[#BE941B]/90 text-white px-3 py-1 rounded-full text-sm font-bold">
-                          {category.count}
-                        </div>
-                      </div>
+
                     </div>
                     
                     {/* Content Section */}
