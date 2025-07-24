@@ -253,54 +253,104 @@ export default function Additifs() {
       </section>
 
       {/* Find a Dealer Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Trouver un revendeur
+      <section className="py-20 bg-gradient-to-r from-[#02173C] to-[#02173C]/95">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-8 py-3 mb-8">
+              <svg className="w-5 h-5 text-[#BE941B] mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Réseau National</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+              Réseau de <span className="text-[#BE941B]">Distribution</span>
             </h2>
-            <div className="w-16 h-1 bg-cmca-red mx-auto"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-white to-[#BE941B] mx-auto mb-8 rounded-full"></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Plus de 115 points de vente PROMOKAR dans toute la Tunisie
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             {/* Left - Tunisia Map */}
-            <div className="border-2 border-cmca-red p-8 bg-gray-900">
-              <div className="text-center mb-6">
-                <div className="bg-cmca-red text-white px-6 py-2 inline-block mb-4">
-                  <span className="font-bold text-lg">MOTUL</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  انضم إلى شبكة موزعين
-                </h3>
-                <h4 className="text-lg text-white">
-                  MOTUL في تونس
-                </h4>
-              </div>
-              
-              {/* Tunisia Map Placeholder */}
-              <div className="aspect-square bg-gray-800 rounded flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-32 h-32 text-cmca-red mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                  </svg>
-                  <p className="text-white">Carte de la Tunisie</p>
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#BE941B]/10 to-[#02173C]/5 rounded-3xl p-8 border border-[#BE941B]/20 backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#BE941B]/10 rounded-full blur-2xl"></div>
+
+                <div className="relative z-10">
+                  <div className="text-center mb-8">
+                    <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-6 py-2 mb-4">
+                      <svg className="w-4 h-4 text-[#BE941B] mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                      <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">21 Gouvernorats</span>
+                    </div>
+                    <h3 className="text-2xl font-black mb-2 text-white">
+                      Réseau PROMOKAR
+                    </h3>
+                    <p className="text-gray-300">
+                      Présent dans toute la Tunisie
+                    </p>
+                  </div>
+
+                  {/* Tunisia Map Placeholder */}
+                  <div className="aspect-square bg-[#BE941B]/10 rounded-2xl flex items-center justify-center border border-[#BE941B]/20 backdrop-blur-sm">
+                    <div className="text-center">
+                      <svg className="w-20 h-20 text-[#BE941B] mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                      <p className="text-white font-medium">Carte Interactive</p>
+                      <p className="text-gray-300 text-sm">115+ Points de Vente</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Right - Dealer Information */}
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed">
-                Les revendeurs MOTUL en Tunisie sont disponibles aussi pour vous conseiller, 
-                orienter et offrir le produit idéal pour votre véhicule.
-              </p>
-              
-              <div className="space-y-4">
-                <button className="bg-cmca-red text-white px-8 py-3 font-medium uppercase tracking-wide hover:bg-opacity-90 transition-colors w-full md:w-auto">
-                  Revendeurs MOTUL
+            <div className="space-y-8 text-white">
+              <div>
+                <h3 className="text-2xl font-black mb-4">
+                  Trouvez Votre Revendeur
+                </h3>
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  Les revendeurs PROMOKAR en Tunisie sont disponibles pour vous conseiller,
+                  orienter et offrir les produits idéaux pour votre véhicule.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#BE941B]/5 to-[#02173C]/5 rounded-2xl p-6 border border-[#BE941B]/20">
+                <h4 className="font-bold text-white mb-2">Services Disponibles</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-center">
+                    <CheckCircle size={16} className="text-[#BE941B] mr-2" />
+                    Conseil et orientation technique
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle size={16} className="text-[#BE941B] mr-2" />
+                    Gamme complète PROMOKAR
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle size={16} className="text-[#BE941B] mr-2" />
+                    Support après-vente
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="group bg-[#BE941B] hover:bg-white text-white hover:text-[#02173C] px-8 py-4 font-bold uppercase tracking-wide transition-all duration-300 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                  <span className="flex items-center justify-center">
+                    Revendeurs PROMOKAR
+                    <svg className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                  </span>
                 </button>
-                <button className="bg-cmca-red text-white px-8 py-3 font-medium uppercase tracking-wide hover:bg-opacity-90 transition-colors w-full md:w-auto">
-                  Devenir un revendeur
+                <button className="group border-2 border-[#BE941B] hover:border-white text-[#BE941B] hover:text-white px-8 py-4 font-bold uppercase tracking-wide transition-all duration-300 rounded-2xl hover:bg-[#BE941B]/10 transform hover:-translate-y-1">
+                  <span className="flex items-center justify-center">
+                    Devenir Revendeur
+                    <ChevronRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
                 </button>
               </div>
             </div>
