@@ -208,12 +208,7 @@ export default function Additifs() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
-                    {/* Price Badge */}
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-[#BE941B] text-white px-3 py-1 rounded-full text-sm font-bold">
-                        {product.price}
-                      </div>
-                    </div>
+
                   </div>
                   
                   {/* Product Info */}
@@ -221,17 +216,7 @@ export default function Additifs() {
                     <h3 className="text-xl font-black text-[#02173C] mb-3 group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
                       {product.name}
                     </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {product.description}
-                    </p>
-                    
-                    {/* CTA Button */}
-                    <button className="w-full bg-gradient-to-r from-[#BE941B] to-[#02173C] hover:from-[#02173C] hover:to-[#BE941B] text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform group-hover:scale-105 shadow-lg hover:shadow-xl">
-                      <span className="flex items-center justify-center">
-                        Voir Plus
-                        <ArrowRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-                      </span>
-                    </button>
+
                   </div>
                 </div>
               </div>
