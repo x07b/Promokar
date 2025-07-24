@@ -145,14 +145,14 @@ export default function Produits() {
       </section>
 
       {/* Product Categories Section */}
-      <section className="py-20 bg-gradient-to-br from-white to-gray-50">
+      <section className="pt-1 pb-20 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-6">
           {/* Dinoil Logo */}
           <div className="text-center mb-12">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Ff858c707aa6f488f835bf447c4e2be30%2Fb9814eb9a4974e549d1dc7fbe2c4d514?format=webp&width=800"
               alt="Dinoil Logo"
-              className="mx-auto max-w-xs md:max-w-sm lg:max-w-md w-full h-auto mb-8"
+              className="mx-auto max-w-48 w-full h-auto mb-8"
             />
           </div>
 
@@ -216,59 +216,8 @@ export default function Produits() {
         </div>
       </section>
 
-      {/* Oil Selector Section */}
-      <section className="py-20 bg-gradient-to-r from-[#02173C] to-[#02173C]/95">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-            
-            {/* Left - Information */}
-            <div className="text-white">
-              <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-6 py-2 mb-8">
-                <Search className="w-4 h-4 text-[#BE941B] mr-2" />
-                <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Outil Intelligent</span>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-                Sélecteur <span className="text-[#BE941B]">d'Huile</span>
-              </h2>
-              
-              <div className="w-24 h-1 bg-[#BE941B] mb-8 rounded-full"></div>
-              
-              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                Comment trouver le bon produit PROMOKAR pour votre véhicule ? 
-                C'est simple avec notre sélecteur intelligent !
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-[#BE941B] rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">1</div>
-                  <span className="text-gray-300">Sélectionnez votre type de véhicule</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-[#BE941B] rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">2</div>
-                  <span className="text-gray-300">Indiquez la marque et le modèle</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-[#BE941B] rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">3</div>
-                  <span className="text-gray-300">Obtenez la recommandation parfaite</span>
-                </div>
-              </div>
-              
-              <button className="group bg-[#BE941B] hover:bg-white px-8 py-4 text-white hover:text-[#02173C] transition-all duration-300 font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                <span className="flex items-center">
-                  Utiliser le Sélecteur
-                  <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </button>
-            </div>
-
-
-          </div>
-        </div>
-      </section>
-
       {/* Find Dealer Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="pt-14 pb-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
