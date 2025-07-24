@@ -154,15 +154,15 @@ export default function Produits() {
             </div>
 
             {/* DINOIL Logo */}
-            <div className="mb-8">
+            <div className="mb-10">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fe4359f63018e41f4b5c3ebff8141a6d7%2F5b442674599842ab9becc82c75c06756?format=webp&width=800"
                 alt="DINOIL - Notre fournisseur de confiance"
-                className="h-16 md:h-20 mx-auto object-contain"
+                className="h-32 md:h-40 lg:h-48 mx-auto object-contain"
               />
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#02173C] mb-6">
               Gamme <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">DINOIL</span>
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-[#02173C] to-[#BE941B] mx-auto mb-8 rounded-full"></div>
