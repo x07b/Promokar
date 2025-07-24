@@ -1,7 +1,31 @@
-import { Link } from "react-router-dom";
-import { Search } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { Search, X } from "lucide-react";
+import { useState } from "react";
 
 export function Header() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setIsSearchOpen(false);
+      setSearchQuery("");
+    }
+  };
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+    if (!isSearchOpen) {
+      setTimeout(() => {
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) searchInput.focus();
+      }, 100);
+    }
+  };
+
   return (
     <header className="bg-white shadow-lg relative z-50 border-b-2 border-promokar-gold/20">
       <div className="container mx-auto px-4">
@@ -51,8 +75,11 @@ export function Header() {
 
           {/* Search and Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <button className="p-3 text-promokar-navy hover:text-promokar-gold transition-colors duration-300 hover:bg-promokar-gold/10 rounded-full">
-              <Search size={22} />
+            <button
+              onClick={toggleSearch}
+              className="p-3 text-promokar-navy hover:text-promokar-gold transition-colors duration-300 hover:bg-promokar-gold/10 rounded-full"
+            >
+              {isSearchOpen ? <X size={22} /> : <Search size={22} />}
             </button>
 
             {/* Mobile Menu Button */}
@@ -64,6 +91,36 @@ export function Header() {
           </div>
         </div>
       </div>
+
+      {/* Search Overlay */}
+      {isSearchOpen && (
+        <div className="absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-xl z-50 transform transition-all duration-300">
+          <div className="container mx-auto px-4 py-6">
+            <form onSubmit={handleSearch} className="flex items-center space-x-4">
+              <div className="flex-1 relative">
+                <input
+                  id="search-input"
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Rechercher des produits PROMOKAR..."
+                  className="w-full px-6 py-4 text-lg border-2 border-promokar-navy/20 rounded-full focus:outline-none focus:ring-2 focus:ring-promokar-gold focus:border-promokar-gold transition-all duration-300 bg-gray-50"
+                />
+                <Search className="absolute right-6 top-1/2 transform -translate-y-1/2 text-gray-400" size={24} />
+              </div>
+              <button
+                type="submit"
+                className="bg-promokar-gold hover:bg-promokar-navy text-white px-8 py-4 rounded-full transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                Rechercher
+              </button>
+            </form>
+            <div className="mt-4 text-sm text-gray-600">
+              <p>Recherchez parmi tous nos produits : lubrifiants automobile, moto, marine, industriels et plus encore.</p>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
