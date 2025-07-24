@@ -36,7 +36,7 @@ export default function Produits() {
       title: "Moto",
       path: "/produits/moto",
       icon: Car,
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&q=80", 
+      image: "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=400&q=80",
       description: "Huiles et lubrifiants moto",
       color: "from-[#02173C]/20 to-[#BE941B]/10",
 
