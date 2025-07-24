@@ -181,12 +181,7 @@ export default function Produits() {
                         </div>
                       </div>
                       
-                      {/* Product Count */}
-                      <div className="absolute bottom-4 left-4">
-                        <div className="bg-[#BE941B]/90 text-white px-3 py-1 rounded-full text-sm font-bold">
-                          {category.count}
-                        </div>
-                      </div>
+
                     </div>
                     
                     {/* Content Section */}
