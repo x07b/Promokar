@@ -147,9 +147,18 @@ export default function Produits() {
       {/* Product Categories Section */}
       <section className="py-20 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-6">
+          {/* Dinoil Logo */}
+          <div className="text-center mb-12">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Ff858c707aa6f488f835bf447c4e2be30%2Fb9814eb9a4974e549d1dc7fbe2c4d514?format=webp&width=800"
+              alt="Dinoil Logo"
+              className="mx-auto max-w-xs md:max-w-sm lg:max-w-md w-full h-auto mb-8"
+            />
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
-              Nos <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Catégories</span>
+              Catalogue <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Dinoil en Tunisie</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
