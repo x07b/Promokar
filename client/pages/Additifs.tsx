@@ -1,7 +1,7 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Droplets, Shield, Star, Zap, Award, Clock, MapPin, Check } from "lucide-react";
 
 export default function Additifs() {
   const additifProducts = [
@@ -9,65 +9,97 @@ export default function Additifs() {
       id: "all-in-one-ultra-diesel",
       name: "ALL IN ONE ULTRA DIESEL",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Additif multifonction pour moteurs diesel"
+      description: "Additif multifonction haute performance pour moteurs diesel",
+      price: "A partir de 25 DT"
     },
     {
       id: "all-in-one-ultra-essence",
       name: "ALL IN ONE ULTRA ESSENCE",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Additif multifonction pour moteurs essence"
+      description: "Additif multifonction premium pour moteurs essence",
+      price: "A partir de 22 DT"
     },
     {
       id: "cat-converter-cleaner",
       name: "CAT CONVERTER CLEANER",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Nettoyant pour catalyseur"
+      description: "Nettoyant catalyseur pour performance optimale",
+      price: "A partir de 35 DT"
     },
     {
       id: "intake-clean",
       name: "INTAKE CLEAN",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Nettoyant pour collecteur d'admission"
+      description: "Nettoyant collecteur d'admission professionnel",
+      price: "A partir de 28 DT"
     },
     {
       id: "octane-booster-gasoline",
       name: "OCTANE BOOSTER GASOLINE",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Amplificateur d'octane pour essence"
+      description: "Amplificateur d'octane pour essence premium",
+      price: "A partir de 30 DT"
     },
     {
       id: "system-keep-clean-diesel",
       name: "SYSTEM KEEP CLEAN DIESEL",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Système de nettoyage pour diesel"
+      description: "Système de nettoyage complet diesel",
+      price: "A partir de 32 DT"
     },
     {
       id: "system-keep-clean-gasoline",
       name: "SYSTEM KEEP CLEAN GASOLINE",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Système de nettoyage pour essence"
+      description: "Système de nettoyage avancé pour essence",
+      price: "A partir de 29 DT"
     },
     {
       id: "transmission-clean",
       name: "TRANSMISSION CLEAN",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Nettoyant pour transmission"
+      description: "Nettoyant transmission automatique et manuelle",
+      price: "A partir de 38 DT"
     },
     {
       id: "valve-lifter-stop-noise",
       name: "VALVE LIFTER STOP NOISE",
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=300&q=80",
-      description: "Arrêt du bruit des poussoirs"
+      description: "Solution anti-bruit des poussoirs hydrauliques",
+      price: "A partir de 26 DT"
     }
   ];
 
-  const categories = [
-    { name: "Additifs", path: "/produits/additifs", active: true },
-    { name: "Entretien", path: "/produits/entretien", active: false },
-    { name: "Automobile", path: "/produits/automobile", active: false },
-    { name: "Moto", path: "/produits/moto", active: false },
-    { name: "Industrie", path: "/produits/industrie", active: false },
-    { name: "Marine", path: "/produits/marine", active: false }
+  const features = [
+    {
+      icon: Shield,
+      title: "Protection Moteur",
+      description: "Protection avancée contre l'usure et les dépôts"
+    },
+    {
+      icon: Zap,
+      title: "Performance Optimisée",
+      description: "Amélioration des performances et de la consommation"
+    },
+    {
+      icon: Star,
+      title: "Qualité Premium",
+      description: "Formules développées selon les standards européens"
+    },
+    {
+      icon: Award,
+      title: "Certifié Dinoil",
+      description: "Gamme certifiée et testée en laboratoire"
+    }
+  ];
+
+  const benefits = [
+    "Réduit la consommation de carburant jusqu'à 15%",
+    "Améliore la puissance du moteur",
+    "Protège contre la corrosion et l'usure",
+    "Nettoie le système d'injection",
+    "Compatible avec tous types de véhicules",
+    "Formulation respectueuse de l'environnement"
   ];
 
   return (
@@ -75,15 +107,24 @@ export default function Additifs() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gray-800 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#02173C] to-[#02173C]/90 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" 
-            alt="MOTUL Workshop"
-            className="w-full h-full object-cover opacity-40"
+            alt="Additifs Dinoil"
+            className="w-full h-full object-cover opacity-20"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#02173C]/80 to-[#02173C]/60"></div>
         </div>
-        <div className="relative z-10 container mx-auto px-4">
+        
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/6 w-3 h-3 bg-[#BE941B] rounded-full opacity-60 animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-[#BE941B] rounded-full opacity-40 animate-bounce delay-300"></div>
+          <div className="absolute bottom-1/3 right-1/2 w-1 h-1 bg-[#BE941B] rounded-full opacity-80 animate-ping delay-700"></div>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-6">
           {/* Breadcrumb */}
           <nav className="flex items-center space-x-2 text-sm mb-8" aria-label="Breadcrumb">
             <Link to="/" className="text-gray-300 hover:text-white transition-colors">
@@ -94,78 +135,103 @@ export default function Additifs() {
               Produits
             </Link>
             <ChevronRight size={16} className="text-gray-400" />
-            <span className="text-white">Additifs</span>
+            <span className="text-[#BE941B] font-medium">Additifs</span>
           </nav>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Additifs MOTUL
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl">
-            Motul en Tunisie vous propose des additifs spécifiques pour garantir la propreté et le bon 
-            fonctionnement du véhicule.
-          </p>
+          <div className="text-center">
+            <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-8 py-3 mb-8">
+              <Droplets className="w-5 h-5 text-[#BE941B] mr-2" />
+              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Gamme Additifs</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+              <span className="block">Additifs</span>
+              <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">Dinoil en Tunisie</span>
+            </h1>
+            
+            <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-white to-[#BE941B] mx-auto mb-8 rounded-full"></div>
+            
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Découvrez notre gamme complète d'additifs Dinoil haute performance.
+              <br />
+              <span className="text-[#BE941B] font-medium">Solutions professionnelles pour l'entretien de votre véhicule.</span>
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Category Navigation */}
-      <section className="bg-black text-white py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category, index) => (
-              <Link
-                key={index}
-                to={category.path}
-                className={`px-6 py-2 border-2 transition-all duration-300 font-medium uppercase tracking-wide ${
-                  category.active
-                    ? "bg-cmca-red border-cmca-red text-white"
-                    : "border-white text-white hover:bg-white hover:text-black"
-                }`}
-              >
-                {category.name}
-              </Link>
-            ))}
+      {/* Features Strip */}
+      <section className="py-12 bg-gradient-to-r from-gray-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="text-center group">
+                  <div className="w-16 h-16 bg-[#BE941B]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#BE941B]/20 transition-colors duration-300">
+                    <IconComponent size={28} className="text-[#BE941B]" />
+                  </div>
+                  <h3 className="font-bold text-[#02173C] text-sm uppercase tracking-wide mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-white to-gray-50">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="bg-cmca-red text-white px-6 py-2 inline-block mb-8">
-              <span className="font-bold text-lg">MOTUL</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Additifs
+            <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
+              Nos <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Additifs</span>
             </h2>
-            <div className="w-16 h-1 bg-cmca-red mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Une gamme complète d'additifs professionnels pour optimiser les performances de votre véhicule
+            </p>
           </div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {additifProducts.map((product) => (
-              <div key={product.id} className="group">
-                <div className="bg-black text-center">
-                  {/* Product Image - Clickable */}
-                  <Link
-                    to={`/produits/additifs/${product.id}`}
-                    className="block aspect-square mb-6 flex items-center justify-center cursor-pointer"
-                  >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {additifProducts.map((product, index) => (
+              <div key={product.id} className="group cursor-pointer">
+                <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
+                  
+                  {/* Product Image */}
+                  <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                  </Link>
-
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    {/* Price Badge */}
+                    <div className="absolute top-4 right-4">
+                      <div className="bg-[#BE941B] text-white px-3 py-1 rounded-full text-sm font-bold">
+                        {product.price}
+                      </div>
+                    </div>
+                  </div>
+                  
                   {/* Product Info */}
-                  <div className="space-y-3">
-                    <h3 className="text-lg font-bold text-white uppercase tracking-wide">
+                  <div className="p-6">
+                    <h3 className="text-xl font-black text-[#02173C] mb-3 group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
                       {product.name}
                     </h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-600 mb-4 leading-relaxed">
                       {product.description}
                     </p>
+                    
+                    {/* CTA Button */}
+                    <button className="w-full bg-gradient-to-r from-[#BE941B] to-[#02173C] hover:from-[#02173C] hover:to-[#BE941B] text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform group-hover:scale-105 shadow-lg hover:shadow-xl">
+                      <span className="flex items-center justify-center">
+                        Voir Plus
+                        <ArrowRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -176,66 +242,164 @@ export default function Additifs() {
           <div className="text-center mt-16">
             <Link 
               to="/produits"
-              className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 font-medium uppercase tracking-wide"
+              className="group inline-flex items-center bg-white hover:bg-[#02173C] border-2 border-[#02173C] text-[#02173C] hover:text-white px-8 py-4 rounded-2xl transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              <ChevronLeft size={20} />
-              <span>Retour aux catégories</span>
+              <ChevronLeft size={20} className="mr-2 transform group-hover:-translate-x-1 transition-transform duration-300" />
+              <span>Retour aux Catégories</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Find a Dealer Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">
-              Trouver un revendeur
-            </h2>
-            <div className="w-16 h-1 bg-cmca-red mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Left - Tunisia Map */}
-            <div className="border-2 border-cmca-red p-8 bg-gray-900">
-              <div className="text-center mb-6">
-                <div className="bg-cmca-red text-white px-6 py-2 inline-block mb-4">
-                  <span className="font-bold text-lg">MOTUL</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  انضم إلى شبكة موزعين
-                </h3>
-                <h4 className="text-lg text-white">
-                  MOTUL في تونس
-                </h4>
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-[#02173C] to-[#02173C]/95">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            
+            {/* Left - Benefits List */}
+            <div className="text-white">
+              <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-6 py-2 mb-8">
+                <Award className="w-4 h-4 text-[#BE941B] mr-2" />
+                <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Avantages Dinoil</span>
               </div>
               
-              {/* Tunisia Map Placeholder */}
-              <div className="aspect-square bg-gray-800 rounded flex items-center justify-center">
+              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
+                Pourquoi Choisir <span className="text-[#BE941B]">Dinoil ?</span>
+              </h2>
+              
+              <div className="w-24 h-1 bg-[#BE941B] mb-8 rounded-full"></div>
+              
+              <div className="space-y-4 mb-8">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="w-6 h-6 bg-[#BE941B] rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                      <Check size={14} className="text-white" />
+                    </div>
+                    <span className="text-gray-300 leading-relaxed">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <button className="group bg-[#BE941B] hover:bg-white px-8 py-4 text-white hover:text-[#02173C] transition-all duration-300 font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <span className="flex items-center">
+                  Découvrir la Gamme
+                  <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+              </button>
+            </div>
+
+            {/* Right - Image */}
+            <div className="relative">
+              <div className="aspect-square relative overflow-hidden rounded-3xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
+                  alt="Additifs Dinoil" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#BE941B]/20 to-transparent"></div>
+              </div>
+              
+              {/* Floating Card */}
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-2xl border border-gray-100">
                 <div className="text-center">
-                  <svg className="w-32 h-32 text-cmca-red mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                  </svg>
-                  <p className="text-white">Carte de la Tunisie</p>
+                  <div className="w-12 h-12 bg-[#BE941B]/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <Clock className="w-6 h-6 text-[#BE941B]" />
+                  </div>
+                  <p className="text-[#02173C] font-bold text-sm">Efficacité</p>
+                  <p className="text-gray-600 text-xs">Résultats immédiats</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Find Dealer Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
+              Réseau de <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Distribution</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Trouvez un revendeur Dinoil près de chez vous
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+            
+            {/* Left - Map */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#02173C] to-[#02173C]/90 rounded-3xl p-8 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#BE941B]/10 rounded-full blur-2xl"></div>
+                
+                <div className="relative z-10">
+                  <div className="text-center mb-8">
+                    <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-6 py-2 mb-4">
+                      <MapPin className="w-4 h-4 text-[#BE941B] mr-2" />
+                      <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">21 Gouvernorats</span>
+                    </div>
+                    <h3 className="text-2xl font-black mb-2">
+                      Réseau PROMOKAR
+                    </h3>
+                    <p className="text-gray-300">
+                      Additifs Dinoil disponibles partout
+                    </p>
+                  </div>
+                  
+                  {/* Tunisia Map Placeholder */}
+                  <div className="aspect-square bg-[#BE941B]/10 rounded-2xl flex items-center justify-center border border-[#BE941B]/20 backdrop-blur-sm">
+                    <div className="text-center">
+                      <MapPin className="w-20 h-20 text-[#BE941B] mx-auto mb-4" />
+                      <p className="text-white font-medium">Carte Interactive</p>
+                      <p className="text-gray-300 text-sm">115+ Points de Vente</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right - Dealer Information */}
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed">
-                Les revendeurs MOTUL en Tunisie sont disponibles aussi pour vous conseiller, 
-                orienter et offrir le produit idéal pour votre véhicule.
-              </p>
-              
-              <div className="space-y-4">
-                <button className="bg-cmca-red text-white px-8 py-3 font-medium uppercase tracking-wide hover:bg-opacity-90 transition-colors w-full md:w-auto">
-                  Revendeurs MOTUL
-                </button>
-                <button className="bg-cmca-red text-white px-8 py-3 font-medium uppercase tracking-wide hover:bg-opacity-90 transition-colors w-full md:w-auto">
-                  Devenir un revendeur
-                </button>
+            {/* Right - Information */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-black text-[#02173C] mb-4">
+                  Trouvez Votre Revendeur
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Notre réseau de distribution couvre l'ensemble du territoire tunisien avec 
+                  des revendeurs qualifiés proposant la gamme complète d'additifs Dinoil.
+                </p>
               </div>
+              
+              <div className="bg-gradient-to-br from-[#BE941B]/5 to-[#02173C]/5 rounded-2xl p-6 border border-[#BE941B]/20">
+                <h4 className="font-bold text-[#02173C] mb-4">Services Disponibles</h4>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-center">
+                    <ArrowRight size={16} className="text-[#BE941B] mr-3" />
+                    Conseil technique personnalisé
+                  </li>
+                  <li className="flex items-center">
+                    <ArrowRight size={16} className="text-[#BE941B] mr-3" />
+                    Gamme complète d'additifs Dinoil
+                  </li>
+                  <li className="flex items-center">
+                    <ArrowRight size={16} className="text-[#BE941B] mr-3" />
+                    Installation et support technique
+                  </li>
+                  <li className="flex items-center">
+                    <ArrowRight size={16} className="text-[#BE941B] mr-3" />
+                    Garantie et service après-vente
+                  </li>
+                </ul>
+              </div>
+              
+              <button className="group bg-[#BE941B] hover:bg-[#02173C] px-8 py-4 text-white transition-all duration-300 font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <span className="flex items-center">
+                  Localiser un Revendeur
+                  <MapPin size={20} className="ml-2 transform group-hover:scale-110 transition-transform duration-300" />
+                </span>
+              </button>
             </div>
           </div>
         </div>
