@@ -1,60 +1,11 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { ChevronLeft, ChevronRight, Ship, Shield, Star, Zap, Award } from "lucide-react";
-=======
 import { ChevronLeft, ChevronRight, Ship, CheckCircle, Award, Shield, Anchor } from "lucide-react";
->>>>>>> origin/main
 
 export default function Marine() {
   const marineProducts = [
     {
-<<<<<<< HEAD
-      id: "outboard-tech-4t-10w30",
-      name: "OUTBOARD TECH 4T 10W30",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-    },
-    {
-      id: "grease-marine-tech",
-      name: "GREASE MARINE TECH",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-    },
-    {
-      id: "outboard-2t-mix",
-      name: "OUTBOARD 2T MIX",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-    },
-    {
-      id: "marine-gear-80w90",
-      name: "MARINE GEAR 80W90",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-    },
-    {
-      id: "hydraulic-marine-hm",
-      name: "HYDRAULIC MARINE HM",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-    },
-    {
-      id: "marine-coolant-long-life",
-      name: "MARINE COOLANT LONG LIFE",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-    },
-    {
-      id: "marine-brake-fluid",
-      name: "MARINE BRAKE FLUID",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-    },
-    {
-      id: "anti-corrosion-spray",
-      name: "ANTI-CORROSION SPRAY",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-    },
-    {
-      id: "waterproof-grease",
-      name: "WATERPROOF GREASE",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80"
-=======
       id: "marine-diesel-15w40",
       name: "MARINE DIESEL 15W40",
       image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=300&q=80",
@@ -125,7 +76,6 @@ export default function Marine() {
       name: "MARINE CLEANER",
       image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=300&q=80",
       description: "Nettoyant dégraissant marin"
->>>>>>> origin/main
     }
   ];
 
@@ -161,11 +111,7 @@ export default function Marine() {
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80" 
-<<<<<<< HEAD
-            alt="Marine Dinoil"
-=======
             alt="PROMOKAR Marine"
->>>>>>> origin/main
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#02173C]/80 to-[#02173C]/60"></div>
@@ -192,39 +138,6 @@ export default function Marine() {
             <span className="text-[#BE941B] font-medium">Marine</span>
           </nav>
 
-<<<<<<< HEAD
-          <div className="text-center">
-            <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-8 py-3 mb-8">
-              <Ship className="w-5 h-5 text-[#BE941B] mr-2" />
-              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Gamme Marine</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">Marine</span>
-            </h1>
-            
-            <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-white to-[#BE941B] mx-auto mb-8 rounded-full"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Strip */}
-      <section className="py-12 bg-gradient-to-r from-gray-50 to-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="text-center group">
-                  <div className="w-16 h-16 bg-[#BE941B]/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#BE941B]/20 transition-colors duration-300">
-                    <IconComponent size={28} className="text-[#BE941B]" />
-                  </div>
-                  <h3 className="font-bold text-[#02173C] text-sm uppercase tracking-wide mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-                </div>
-              );
-            })}
-=======
           <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-8 py-3 mb-8">
             <Ship className="w-5 h-5 text-[#BE941B] mr-2" />
             <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Marine PROMOKAR</span>
@@ -263,21 +176,11 @@ export default function Marine() {
                 {category.name}
               </Link>
             ))}
->>>>>>> origin/main
           </div>
         </div>
       </section>
 
       {/* Products Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-br from-white to-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
-              Produits <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Marine</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
-=======
       <section className="py-20 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full">
@@ -299,32 +202,10 @@ export default function Marine() {
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Découvrez notre gamme spécialisée de lubrifiants marins pour une navigation sûre et performante.
             </p>
->>>>>>> origin/main
           </div>
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-<<<<<<< HEAD
-            {marineProducts.map((product, index) => (
-              <Link key={product.id} to={`/produits/marine/${product.id}`} className="group cursor-pointer">
-                <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
-                  
-                  {/* Product Image */}
-                  <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  
-                  {/* Product Info */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide text-center">
-                      {product.name}
-                    </h3>
-=======
             {marineProducts.map((product) => (
               <div key={product.id} className="group relative">
                 <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-[#BE941B]/30 transform hover:-translate-y-3 hover:scale-105">
@@ -356,7 +237,6 @@ export default function Marine() {
                       <CheckCircle className="w-4 h-4 text-[#BE941B] mr-2 flex-shrink-0" />
                       <span>Qualité professionnelle</span>
                     </div>
->>>>>>> origin/main
                   </div>
 
                   {/* Hover accent */}
@@ -395,24 +275,15 @@ export default function Marine() {
           <div className="text-center mt-16">
             <Link 
               to="/produits"
-<<<<<<< HEAD
-              className="group inline-flex items-center bg-white hover:bg-[#02173C] border-2 border-[#02173C] text-[#02173C] hover:text-white px-8 py-4 rounded-2xl transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              <ChevronLeft size={20} className="mr-2 transform group-hover:-translate-x-1 transition-transform duration-300" />
-              <span>Retour aux Catégories</span>
-=======
               className="group inline-flex items-center space-x-2 bg-[#02173C] hover:bg-[#BE941B] text-white px-8 py-4 rounded-2xl transition-all duration-300 font-bold uppercase tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <ChevronLeft size={20} className="transform group-hover:-translate-x-1 transition-transform duration-300" />
               <span>Retour aux catégories</span>
->>>>>>> origin/main
             </Link>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Find a Dealer Section */}
       <section className="py-20 bg-gradient-to-r from-[#02173C] to-[#02173C]/95">
         <div className="container mx-auto px-6">
@@ -519,7 +390,6 @@ export default function Marine() {
         </div>
       </section>
 
->>>>>>> origin/main
       <Footer />
     </div>
   );
