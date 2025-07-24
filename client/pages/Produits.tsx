@@ -12,7 +12,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&q=80",
       description: "Additifs haute performance pour moteurs",
       color: "from-[#BE941B]/20 to-[#02173C]/10",
-      count: "45+ produits"
+
     },
     {
       title: "Automobile",
@@ -21,7 +21,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=400&q=80",
       description: "Lubrifiants automobiles professionnels",
       color: "from-[#02173C]/20 to-[#BE941B]/10",
-      count: "60+ produits"
+
     },
     {
       title: "Entretien",
@@ -30,16 +30,16 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=400&q=80",
       description: "Produits d'entretien et maintenance",
       color: "from-[#BE941B]/20 to-[#02173C]/10",
-      count: "35+ produits"
+
     },
     {
       title: "Moto",
       path: "/produits/moto",
       icon: Car,
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&q=80", 
+      image: "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=400&q=80",
       description: "Huiles et lubrifiants moto",
       color: "from-[#02173C]/20 to-[#BE941B]/10",
-      count: "25+ produits"
+
     },
     {
       title: "Industrie",
@@ -48,7 +48,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=400&q=80",
       description: "Solutions industrielles avancées",
       color: "from-[#BE941B]/20 to-[#02173C]/10",
-      count: "80+ produits"
+
     },
     {
       title: "Marine",
@@ -57,7 +57,7 @@ export default function Produits() {
       image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80",
       description: "Lubrifiants marins spécialisés",
       color: "from-[#02173C]/20 to-[#BE941B]/10",
-      count: "20+ produits"
+
     }
   ];
 
@@ -144,6 +144,7 @@ export default function Produits() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Product Categories Section */}
       <section className="pt-1 pb-20 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-6">
@@ -158,10 +159,35 @@ export default function Produits() {
 
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
+=======
+      {/* DINOIL Partnership Section - Positioned above categories */}
+      <section className="bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-6">
+          {/* Large DINOIL Logo - Golden Ratio Top Section */}
+          <div className="text-center py-8 md:py-12">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fe4359f63018e41f4b5c3ebff8141a6d7%2F5b442674599842ab9becc82c75c06756?format=webp&width=800"
+              alt="DINOIL - Notre fournisseur de confiance"
+              className="h-24 md:h-32 lg:h-40 xl:h-48 mx-auto object-contain mb-6"
+            />
+            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              PROMOKAR s'associe avec <span className="font-bold text-[#BE941B]">DINOIL</span>, notre fournisseur de confiance,
+              pour vous offrir une gamme complète de lubrifiants haute performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Categories Section - Golden Ratio Bottom Section */}
+      <section className="py-16 bg-gradient-to-br from-white to-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-black text-[#02173C] mb-6">
+>>>>>>> origin/main
               Catalogue <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Dinoil en Tunisie</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Explorez notre large gamme de produits spécialisés pour chaque domaine d'application
             </p>
           </div>
@@ -216,6 +242,10 @@ export default function Produits() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
       {/* Find Dealer Section */}
       <section className="pt-14 pb-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-6">

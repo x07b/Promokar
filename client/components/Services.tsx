@@ -90,7 +90,7 @@ export function Services() {
             const IconComponent = product.icon;
             return (
               <div key={index} className="group relative">
-                <div className={`bg-gradient-to-br ${product.bgGradient} rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 hover:border-[#BE941B]/30 transform hover:-translate-y-3 hover:scale-105 backdrop-blur-sm`}>
+                <div className={`bg-gradient-to-br ${product.bgGradient} rounded-3xl px-8 py-8 pb-[31px] shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 hover:border-[#BE941B]/30 transform hover:-translate-y-3 hover:scale-105 backdrop-blur-sm`}>
                   
                   {/* Icon */}
                   <div className="mb-6 flex justify-center">
