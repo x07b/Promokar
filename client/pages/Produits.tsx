@@ -166,12 +166,8 @@ export default function Produits() {
       <section className="py-16 bg-gradient-to-br from-white to-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-[#BE941B]/10 border border-[#BE941B]/20 rounded-full px-8 py-3 mb-6">
-              <Droplets className="w-5 h-5 text-[#BE941B] mr-2" />
-              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Nos Catégories</span>
-            </div>
             <h2 className="text-3xl md:text-5xl font-black text-[#02173C] mb-6">
-              Solutions <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Spécialisées</span>
+              Catalogue <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Dinoil en Tunisie</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
