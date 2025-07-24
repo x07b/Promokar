@@ -1,7 +1,7 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Droplets, CheckCircle, Award, Shield } from "lucide-react";
 
 export default function Additifs() {
   const additifProducts = [
