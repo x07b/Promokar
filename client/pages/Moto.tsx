@@ -1,9 +1,17 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Zap, CheckCircle, Award, Shield, Gauge } from "lucide-react";
+import { ChevronLeft, ChevronRight, Zap, CheckCircle, Award, Shield, Gauge, Star } from "lucide-react";
 
 export default function Moto() {
+  const categories = [
+    { name: "Additifs", path: "/produits/additifs", active: false },
+    { name: "Automobile", path: "/produits/automobile", active: false },
+    { name: "Entretien", path: "/produits/entretien", active: false },
+    { name: "Moto", path: "/produits/moto", active: true },
+    { name: "Industrie", path: "/produits/industrie", active: false },
+    { name: "Marine", path: "/produits/marine", active: false }
+  ];
   const motoProducts = [
     {
       id: "moto-7100-4t",
@@ -230,7 +238,7 @@ export default function Moto() {
                   {/* Hover accent */}
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-3xl"></div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
 

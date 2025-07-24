@@ -1,9 +1,17 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Ship, CheckCircle, Award, Shield, Anchor } from "lucide-react";
+import { ChevronLeft, ChevronRight, Ship, CheckCircle, Award, Shield, Anchor, Star, Zap } from "lucide-react";
 
 export default function Marine() {
+  const categories = [
+    { name: "Additifs", path: "/produits/additifs", active: false },
+    { name: "Automobile", path: "/produits/automobile", active: false },
+    { name: "Entretien", path: "/produits/entretien", active: false },
+    { name: "Moto", path: "/produits/moto", active: false },
+    { name: "Industrie", path: "/produits/industrie", active: false },
+    { name: "Marine", path: "/produits/marine", active: true }
+  ];
   const marineProducts = [
     {
       id: "marine-diesel-15w40",
@@ -242,7 +250,7 @@ export default function Marine() {
                   {/* Hover accent */}
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-3xl"></div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
 
