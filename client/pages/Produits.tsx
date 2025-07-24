@@ -144,33 +144,38 @@ export default function Produits() {
         </div>
       </section>
 
-      {/* Product Categories Section */}
-      <section className="py-20 bg-gradient-to-br from-white to-gray-50">
+      {/* DINOIL Partnership Section - Positioned above categories */}
+      <section className="bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-[#BE941B]/10 border border-[#BE941B]/20 rounded-full px-8 py-3 mb-8">
-              <Droplets className="w-5 h-5 text-[#BE941B] mr-2" />
-              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Notre Fournisseur de Confiance</span>
-            </div>
-
-            {/* DINOIL Logo */}
-            <div className="mb-10">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fe4359f63018e41f4b5c3ebff8141a6d7%2F5b442674599842ab9becc82c75c06756?format=webp&width=800"
-                alt="DINOIL - Notre fournisseur de confiance"
-                className="h-32 md:h-40 lg:h-48 mx-auto object-contain"
-              />
-            </div>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-[#02173C] mb-6">
-              Gamme <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">DINOIL</span>
-            </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-[#02173C] to-[#BE941B] mx-auto mb-8 rounded-full"></div>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          {/* Large DINOIL Logo - Golden Ratio Top Section */}
+          <div className="text-center py-8 md:py-12">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2Fe4359f63018e41f4b5c3ebff8141a6d7%2F5b442674599842ab9becc82c75c06756?format=webp&width=800"
+              alt="DINOIL - Notre fournisseur de confiance"
+              className="h-24 md:h-32 lg:h-40 xl:h-48 mx-auto object-contain mb-6"
+            />
+            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               PROMOKAR s'associe avec <span className="font-bold text-[#BE941B]">DINOIL</span>, notre fournisseur de confiance,
               pour vous offrir une gamme complète de lubrifiants haute performance.
-              <br />
-              <span className="text-[#02173C] font-medium">Explorez nos catégories spécialisées pour chaque domaine d'application.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Categories Section - Golden Ratio Bottom Section */}
+      <section className="py-16 bg-gradient-to-br from-white to-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-[#BE941B]/10 border border-[#BE941B]/20 rounded-full px-8 py-3 mb-6">
+              <Droplets className="w-5 h-5 text-[#BE941B] mr-2" />
+              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Nos Catégories</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-[#02173C] mb-6">
+              Solutions <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Spécialisées</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Explorez notre large gamme de produits spécialisés pour chaque domaine d'application
             </p>
           </div>
 
