@@ -149,56 +149,103 @@ export default function Additifs() {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-1/4 left-1/6 w-32 h-32 bg-[#BE941B]/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-[#02173C]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 right-1/6 w-24 h-24 bg-[#BE941B]/3 rounded-full blur-2xl"></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <div className="bg-cmca-red text-white px-6 py-2 inline-block mb-8">
-              <span className="font-bold text-lg">MOTUL</span>
+            <div className="inline-flex items-center bg-[#BE941B]/10 border border-[#BE941B]/20 rounded-full px-8 py-3 mb-8">
+              <Droplets className="w-5 h-5 text-[#BE941B] mr-2" />
+              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Gamme PROMOKAR</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Additifs
+            <h2 className="text-4xl md:text-6xl font-black text-[#02173C] mb-6 leading-tight">
+              Additifs <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Haute Performance</span>
             </h2>
-            <div className="w-16 h-1 bg-cmca-red mx-auto"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-[#02173C] to-[#BE941B] mx-auto mb-8 rounded-full"></div>
+            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              Découvrez notre gamme complète d'additifs professionnels pour l'entretien et l'optimisation de vos moteurs.
+            </p>
           </div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {additifProducts.map((product) => (
-              <div key={product.id} className="group">
-                <div className="bg-black text-center">
+              <div key={product.id} className="group relative">
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-[#BE941B]/30 transform hover:-translate-y-3 hover:scale-105">
+
                   {/* Product Image - Clickable */}
                   <Link
                     to={`/produits/additifs/${product.id}`}
-                    className="block aspect-square mb-6 flex items-center justify-center cursor-pointer"
+                    className="block aspect-square mb-6 flex items-center justify-center cursor-pointer relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#BE941B]/5 to-[#02173C]/5"
                   >
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Link>
 
                   {/* Product Info */}
-                  <div className="space-y-3">
-                    <h3 className="text-lg font-bold text-white uppercase tracking-wide">
+                  <div className="text-center space-y-3">
+                    <h3 className="text-xl font-black text-[#02173C] uppercase tracking-wide group-hover:text-[#BE941B] transition-colors duration-300">
                       {product.name}
                     </h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       {product.description}
                     </p>
+
+                    {/* Benefits */}
+                    <div className="flex items-center justify-center text-sm text-gray-700 pt-2">
+                      <CheckCircle className="w-4 h-4 text-[#BE941B] mr-2 flex-shrink-0" />
+                      <span>Qualité professionnelle</span>
+                    </div>
                   </div>
+
+                  {/* Hover accent */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-3xl"></div>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* Features Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-5xl mx-auto">
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-[#BE941B]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#BE941B]/20 transition-colors duration-300">
+                <Award size={28} className="text-[#BE941B]" />
+              </div>
+              <h3 className="text-lg font-bold text-[#02173C] mb-2 uppercase tracking-wide">Qualité Certifiée</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Conformité aux standards internationaux</p>
+            </div>
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-[#BE941B]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#BE941B]/20 transition-colors duration-300">
+                <Shield size={28} className="text-[#BE941B]" />
+              </div>
+              <h3 className="text-lg font-bold text-[#02173C] mb-2 uppercase tracking-wide">Protection Avancée</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Protection maximale de vos équipements</p>
+            </div>
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+              <div className="w-16 h-16 bg-[#BE941B]/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#BE941B]/20 transition-colors duration-300">
+                <Droplets size={28} className="text-[#BE941B]" />
+              </div>
+              <h3 className="text-lg font-bold text-[#02173C] mb-2 uppercase tracking-wide">Efficacité Prouvée</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Résultats mesurables et durables</p>
+            </div>
+          </div>
+
           {/* Back to Categories */}
           <div className="text-center mt-16">
-            <Link 
+            <Link
               to="/produits"
-              className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 font-medium uppercase tracking-wide"
+              className="group inline-flex items-center space-x-2 bg-[#02173C] hover:bg-[#BE941B] text-white px-8 py-4 rounded-2xl transition-all duration-300 font-bold uppercase tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={20} className="transform group-hover:-translate-x-1 transition-transform duration-300" />
               <span>Retour aux catégories</span>
             </Link>
           </div>
