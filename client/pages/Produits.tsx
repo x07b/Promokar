@@ -253,6 +253,84 @@ export default function Produits() {
               </button>
             </div>
 
+            {/* Right - Visual Content */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#BE941B]/10 to-[#02173C]/5 rounded-3xl p-8 relative overflow-hidden border border-[#BE941B]/20 backdrop-blur-sm">
+                {/* Background decorative elements */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#BE941B]/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#02173C]/10 rounded-full blur-2xl"></div>
+
+                {/* Main image/video placeholder */}
+                <div className="relative z-10 mb-6">
+                  <div className="aspect-video bg-gradient-to-br from-white/90 to-white/70 rounded-2xl overflow-hidden shadow-2xl border border-white/30">
+                    <img
+                      src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?w=600&q=80"
+                      alt="PROMOKAR Oil Selector Tutorial"
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Video overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/60 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-[#BE941B]/90 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    {/* Tutorial badge */}
+                    <div className="absolute top-4 left-4">
+                      <div className="bg-[#BE941B]/90 text-white px-3 py-1 rounded-full text-sm font-bold backdrop-blur-sm">
+                        🎥 Tutoriel
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Feature highlights */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-white/80 rounded-xl p-4 text-center backdrop-blur-sm border border-white/50">
+                    <div className="text-2xl font-black text-[#BE941B] mb-1">3 min</div>
+                    <div className="text-sm text-gray-600 font-medium">Durée moyenne</div>
+                  </div>
+                  <div className="bg-white/80 rounded-xl p-4 text-center backdrop-blur-sm border border-white/50">
+                    <div className="text-2xl font-black text-[#02173C] mb-1">100%</div>
+                    <div className="text-sm text-gray-600 font-medium">Précision</div>
+                  </div>
+                </div>
+
+                {/* Quick features */}
+                <div className="space-y-3">
+                  <div className="flex items-center text-white">
+                    <div className="w-6 h-6 bg-[#BE941B] rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </div>
+                    <span className="text-sm font-medium">Interface intuitive et rapide</span>
+                  </div>
+                  <div className="flex items-center text-white">
+                    <div className="w-6 h-6 bg-[#BE941B] rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </div>
+                    <span className="text-sm font-medium">Base de données complète</span>
+                  </div>
+                  <div className="flex items-center text-white">
+                    <div className="w-6 h-6 bg-[#BE941B] rounded-full flex items-center justify-center mr-3">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                    </div>
+                    <span className="text-sm font-medium">Recommandations personnalisées</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#BE941B] rounded-full opacity-60 animate-bounce"></div>
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#02173C] rounded-full opacity-40 animate-pulse"></div>
+            </div>
 
           </div>
         </div>
