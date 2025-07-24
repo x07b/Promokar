@@ -196,9 +196,9 @@ export default function Additifs() {
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {additifProducts.map((product, index) => (
-              <div key={product.id} className="group cursor-pointer">
+              <Link key={product.id} to={`/produits/additifs/${product.id}`} className="group cursor-pointer">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
-                  
+
                   {/* Product Image */}
                   <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                     <img
@@ -207,10 +207,10 @@ export default function Additifs() {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    
+
 
                   </div>
-                  
+
                   {/* Product Info */}
                   <div className="p-6">
                     <h3 className="text-xl font-black text-[#02173C] mb-3 group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
@@ -219,7 +219,7 @@ export default function Additifs() {
 
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
