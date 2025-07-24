@@ -75,34 +75,54 @@ export default function Additifs() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gray-800 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#02173C] to-[#02173C]/90 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" 
-            alt="MOTUL Workshop"
-            className="w-full h-full object-cover opacity-40"
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80"
+            alt="PROMOKAR Additifs"
+            className="w-full h-full object-cover opacity-20"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#02173C]/80 to-[#02173C]/60"></div>
         </div>
-        <div className="relative z-10 container mx-auto px-4">
+
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/6 w-3 h-3 bg-[#BE941B] rounded-full opacity-60 animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-[#BE941B] rounded-full opacity-40 animate-bounce delay-300"></div>
+          <div className="absolute bottom-1/3 right-1/2 w-1 h-1 bg-[#BE941B] rounded-full opacity-80 animate-ping delay-700"></div>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-6">
           {/* Breadcrumb */}
           <nav className="flex items-center space-x-2 text-sm mb-8" aria-label="Breadcrumb">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-[#BE941B] transition-colors">
               Accueil
             </Link>
             <ChevronRight size={16} className="text-gray-400" />
-            <Link to="/produits" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/produits" className="text-gray-300 hover:text-[#BE941B] transition-colors">
               Produits
             </Link>
             <ChevronRight size={16} className="text-gray-400" />
-            <span className="text-white">Additifs</span>
+            <span className="text-[#BE941B] font-medium">Additifs</span>
           </nav>
 
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Additifs MOTUL
+          <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-8 py-3 mb-8">
+            <Droplets className="w-5 h-5 text-[#BE941B] mr-2" />
+            <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Additifs PROMOKAR</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            <span className="block">Additifs</span>
+            <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">PROMOKAR</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl">
-            Motul en Tunisie vous propose des additifs spécifiques pour garantir la propreté et le bon 
-            fonctionnement du véhicule.
+
+          <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-white to-[#BE941B] mb-8 rounded-full"></div>
+
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl leading-relaxed">
+            PROMOKAR en Tunisie vous propose des additifs haute performance pour garantir la propreté
+            et le bon fonctionnement de votre véhicule.
+            <br />
+            <span className="text-[#BE941B] font-medium">Solutions professionnelles pour tous types de moteurs.</span>
           </p>
         </div>
       </section>
