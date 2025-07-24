@@ -144,22 +144,6 @@ export default function Produits() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Product Categories Section */}
-      <section className="pt-1 pb-20 bg-gradient-to-br from-white to-gray-50">
-        <div className="container mx-auto px-6">
-          {/* Dinoil Logo */}
-          <div className="text-center mb-12">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Ff858c707aa6f488f835bf447c4e2be30%2Fb9814eb9a4974e549d1dc7fbe2c4d514?format=webp&width=800"
-              alt="Dinoil Logo"
-              className="mx-auto max-w-48 w-full h-auto mb-8"
-            />
-          </div>
-
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
-=======
       {/* DINOIL Partnership Section - Positioned above categories */}
       <section className="bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-6">
@@ -183,7 +167,6 @@ export default function Produits() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-black text-[#02173C] mb-6">
->>>>>>> origin/main
               Catalogue <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Dinoil en Tunisie</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
@@ -242,10 +225,7 @@ export default function Produits() {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
       {/* Find Dealer Section */}
       <section className="pt-14 pb-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-6">
