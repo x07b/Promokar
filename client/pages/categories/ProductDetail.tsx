@@ -316,7 +316,7 @@ export default function ProductDetail() {
         "Compatible essence et diesel",
         "Équipés de filtres à particules",
         "Technologie Low Saps",
-        "Protège filtres à particules",
+        "Protège filtres �� particules",
         "Protection dispositifs post-traitement",
         "Recommandé pour Opel, Saab, Chevrolet, Vauxhall"
       ]
@@ -721,28 +721,6 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {/* Related Products Section */}
-          <div className="mt-20">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-black text-[#02173C] mb-4">
-                Produits <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Similaires</span>
-              </h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Découvrez d'autres produits de la même gamme {categoryName}
-              </p>
-            </div>
-
-            <div className="text-center">
-              <Link
-                to={categoryPath}
-                className="group inline-flex items-center bg-[#BE941B] hover:bg-[#02173C] text-white px-8 py-4 rounded-2xl transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                <span>Voir Tous les Produits</span>
-                <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div>
-          </div>
 
           {/* Back to Products */}
           <div className="text-center mt-20">
