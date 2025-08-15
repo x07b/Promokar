@@ -141,31 +141,30 @@ export default function MultigradeLineVehicules() {
             </p>
           </div>
 
-          {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {multigradeProducts.map((product, index) => (
-              <Link key={product.id} to={`/produits/multigrade-line/vehicules/${product.id}`} className="group cursor-pointer">
-                <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
-                  
-                  {/* Product Image */}
-                  <div className="aspect-square relative bg-white p-4">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  
-                  {/* Product Info */}
-                  <div className="p-6 text-center">
-                    <h1 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
-                      {product.name}
-                    </h1>
-                  </div>
-                </div>
+          {/* Migration Notice */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-[#BE941B]/10 to-[#02173C]/10 border border-[#BE941B]/30 rounded-3xl p-12 text-center">
+              <div className="w-20 h-20 bg-[#BE941B]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <ArrowRight size={32} className="text-[#BE941B]" />
+              </div>
+
+              <h3 className="text-3xl font-black text-[#02173C] mb-4">
+                Produits Déplacés
+              </h3>
+
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Tous les produits de la gamme Multigrade Line Véhicules ont été reclassifiés
+                et sont maintenant disponibles dans notre nouvelle gamme <strong>Premium Line Véhicules</strong>.
+              </p>
+
+              <Link
+                to="/produits/premium-line/vehicules"
+                className="group inline-flex items-center bg-[#BE941B] hover:bg-[#02173C] text-white px-8 py-4 rounded-2xl transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                <span>Voir Premium Line Véhicules</span>
+                <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
-            ))}
+            </div>
           </div>
 
           {/* Back to Categories */}
