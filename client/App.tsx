@@ -63,7 +63,8 @@ const App = () => (
           <Route path="/produits/huile-additifs-freins/additifs-produits-chimiques" element={<div>Additifs et Produits Chimiques</div>} />
           {/* Standalone Category Routes */}
           <Route path="/produits/poids-lourds" element={<PoidsLourds />} />
-          <Route path="/produits/moto-sea-engines" element={<div>Moto and Sea Engines</div>} />
+          <Route path="/produits/moto-sea-engines" element={<MotoSeaEngines />} />
+          <Route path="/produits/moto-sea-engines/:productId" element={<div>Moto Product Detail</div>} />
           <Route path="/produits/lubrifiants-industriels" element={<div>Lubrifiants Industriels</div>} />
           <Route path="/produits/machines-agricoles" element={<div>Machines Agricoles</div>} />
           <Route path="/produits/boites-automatiques" element={<div>Boites Automatiques</div>} />
