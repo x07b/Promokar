@@ -175,16 +175,8 @@ export default function PremiumLineVehicules() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {premiumProducts.map((product, index) => (
               <Link key={product.id} to={`/produits/premium-line/vehicules/${product.id}`} className="group cursor-pointer">
-                <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100 relative">
-                  
-                  {/* Premium Badge */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="bg-gradient-to-r from-[#BE941B] to-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg">
-                      <Crown size={12} className="inline mr-1" />
-                      Premium
-                    </div>
-                  </div>
-                  
+                <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
+
                   {/* Product Image */}
                   <div className="aspect-square relative bg-white p-4">
                     <img
