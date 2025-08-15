@@ -56,7 +56,7 @@ const App = () => (
           <Route path="/produits/premium-line/vehicules/:productId" element={<CompetitionProductDetail />} />
           {/* Multigrade Line Routes */}
           <Route path="/produits/multigrade-line/vehicules" element={<MultigradeLineVehicules />} />
-          <Route path="/produits/multigrade-line/vehicules/:productId" element={<CompetitionProductDetail />} />
+          <Route path="/produits/multigrade-line/vehicules/:productId" element={<MultigradeProductDetail />} />
           {/* Huile et Additifs pour Freins Routes (Main category with subcategories) */}
           <Route path="/produits/huile-additifs-freins/huile-frein-additifs" element={<div>Huile de Frein et Additifs</div>} />
           <Route path="/produits/huile-additifs-freins/additifs-produits-chimiques" element={<div>Additifs et Produits Chimiques</div>} />
