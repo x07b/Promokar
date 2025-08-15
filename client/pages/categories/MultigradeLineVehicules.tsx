@@ -13,7 +13,7 @@ export default function MultigradeLineVehicules() {
     },
     {
       id: "dinoil-4000-sae-20w50-xm",
-      name: "DINOIL 4000 SAE 20W/50 XM",
+      name: "DINOIL 4000 SAE 20W/50 XM", 
       image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F0f881515469843f8bb243a88fead08f3?format=webp&width=800",
       description: "Lubrifiant adapté à tous les types de moteurs diesel et turbodiesel. Composé avec des additifs spéciaux qui permettent d'empêcher la formation de boues, assurer une lubrification parfaite et réduire les émissions de gaz d'échappement. Son utilisation est particulièrement adaptée pour les moteurs usés. Il se caractérise par sa puissance détergente dispersante élevée et sa protection du moteur."
     },
@@ -166,11 +166,11 @@ export default function MultigradeLineVehicules() {
           </div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {multigradeProducts.map((product, index) => (
               <Link key={product.id} to={`/produits/multigrade-line/vehicules/${product.id}`} className="group cursor-pointer">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
-
+                  
                   {/* Product Image */}
                   <div className="aspect-square relative bg-white p-4">
                     <img
@@ -180,15 +180,12 @@ export default function MultigradeLineVehicules() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-
+                  
                   {/* Product Info */}
                   <div className="p-6 text-center">
-                    <h1 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide mb-4">
+                    <h1 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
                       {product.name}
                     </h1>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {product.description.substring(0, 120)}...
-                    </p>
                   </div>
                 </div>
               </Link>
