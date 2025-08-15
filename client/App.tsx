@@ -51,7 +51,8 @@ const App = () => (
           <Route path="/produits/professional-line/vehicules" element={<ProfessionalLineVehicules />} />
           <Route path="/produits/professional-line/vehicules/:productId" element={<CompetitionProductDetail />} />
           {/* Premium Line Routes */}
-          <Route path="/produits/premium-line/vehicules" element={<div>Premium Line Vehicules</div>} />
+          <Route path="/produits/premium-line/vehicules" element={<PremiumLineVehicules />} />
+          <Route path="/produits/premium-line/vehicules/:productId" element={<CompetitionProductDetail />} />
           {/* Multigrade Line Routes */}
           <Route path="/produits/multigrade-line/vehicules" element={<MultigradeLineVehicules />} />
           <Route path="/produits/multigrade-line/vehicules/:productId" element={<CompetitionProductDetail />} />
