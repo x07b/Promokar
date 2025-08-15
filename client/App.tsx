@@ -26,6 +26,7 @@ import ProfessionalLineVehicules from "./pages/categories/ProfessionalLineVehicu
 import MultigradeLineVehicules from "./pages/categories/MultigradeLineVehicules";
 import PoidsLourds from "./pages/categories/PoidsLourds";
 import CompetitionProductDetail from "./pages/categories/ProductDetail";
+import PremiumLineVehicules from "./pages/categories/PremiumLineVehicules";
 
 const queryClient = new QueryClient();
 
