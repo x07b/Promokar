@@ -21,6 +21,9 @@ import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 import CompetitionLineVehicules from "./pages/categories/CompetitionLineVehicules";
 import CompetitionLineMoto from "./pages/categories/CompetitionLineMoto";
+import CompetitionLineMotosMoteurs from "./pages/categories/CompetitionLineMotosMoteurs";
+import ProfessionalLineVehicules from "./pages/categories/ProfessionalLineVehicules";
+import MultigradeLineVehicules from "./pages/categories/MultigradeLineVehicules";
 import PoidsLourds from "./pages/categories/PoidsLourds";
 import CompetitionProductDetail from "./pages/categories/ProductDetail";
 
@@ -41,13 +44,16 @@ const App = () => (
           <Route path="/produits/competition-line/vehicules/:productId" element={<CompetitionProductDetail />} />
           <Route path="/produits/competition-line/moto" element={<CompetitionLineMoto />} />
           <Route path="/produits/competition-line/moto/:productId" element={<CompetitionProductDetail />} />
-          <Route path="/produits/competition-line/motos-moteurs-marins" element={<div>Competition Line Motos et Moteurs Marins</div>} />
+          <Route path="/produits/competition-line/motos-moteurs-marins" element={<CompetitionLineMotosMoteurs />} />
+          <Route path="/produits/competition-line/motos-moteurs-marins/:productId" element={<CompetitionProductDetail />} />
           {/* Professional Line Routes */}
-          <Route path="/produits/professional-line/vehicules" element={<div>Professional Line Vehicules</div>} />
+          <Route path="/produits/professional-line/vehicules" element={<ProfessionalLineVehicules />} />
+          <Route path="/produits/professional-line/vehicules/:productId" element={<CompetitionProductDetail />} />
           {/* Premium Line Routes */}
           <Route path="/produits/premium-line/vehicules" element={<div>Premium Line Vehicules</div>} />
           {/* Multigrade Line Routes */}
-          <Route path="/produits/multigrade-line/vehicules" element={<div>Multigrade Line Vehicules</div>} />
+          <Route path="/produits/multigrade-line/vehicules" element={<MultigradeLineVehicules />} />
+          <Route path="/produits/multigrade-line/vehicules/:productId" element={<CompetitionProductDetail />} />
           {/* Huile et Additifs pour Freins Routes (Main category with subcategories) */}
           <Route path="/produits/huile-additifs-freins/huile-frein-additifs" element={<div>Huile de Frein et Additifs</div>} />
           <Route path="/produits/huile-additifs-freins/additifs-produits-chimiques" element={<div>Additifs et Produits Chimiques</div>} />

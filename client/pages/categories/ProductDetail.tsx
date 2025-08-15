@@ -7,10 +7,21 @@ export default function ProductDetail() {
   const { productId } = useParams();
   const location = useLocation();
 
-  // Determine if this is a moto or vehicules product based on URL
+  // Determine category based on URL
   const isMotoProduct = location.pathname.includes('/moto/');
-  const categoryPath = isMotoProduct ? '/produits/competition-line/moto' : '/produits/competition-line/vehicules';
-  const categoryName = isMotoProduct ? 'Competition Line - Moto' : 'Competition Line - Véhicules';
+  const isMarineProduct = location.pathname.includes('/motos-moteurs-marins/');
+  const isProfessionalProduct = location.pathname.includes('/professional-line/');
+  const isMultigradeProduct = location.pathname.includes('/multigrade-line/');
+  const categoryPath = isMotoProduct ? '/produits/competition-line/moto' :
+                      isMarineProduct ? '/produits/competition-line/motos-moteurs-marins' :
+                      isProfessionalProduct ? '/produits/professional-line/vehicules' :
+                      isMultigradeProduct ? '/produits/multigrade-line/vehicules' :
+                      '/produits/competition-line/vehicules';
+  const categoryName = isMotoProduct ? 'Competition Line - Moto' :
+                      isMarineProduct ? 'Competition Line - Motos et Moteurs Marins' :
+                      isProfessionalProduct ? 'Professional Line - Véhicules' :
+                      isMultigradeProduct ? 'Multigrade Line - Véhicules' :
+                      'Competition Line - Véhicules';
 
   // Product data - this could be moved to a context or external data source later
   const productData: { [key: string]: any } = {
@@ -107,6 +118,403 @@ export default function ProductDetail() {
         "Faible consommation d'huile à charges/régimes élevés",
         "Prolonge la durée de vie du moteur et convertisseur catalytique",
         "Répond aux exigences OEM les plus strictes"
+      ]
+    },
+    "dinoil-formula-jet-ski-10w40": {
+      name: "DINOIL FORMULA JET SKI 10W/40",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Ff980eebbbf4e48918d9952d0d19cdbb2?format=webp&width=800",
+      description: "Il s'agit d'une huile lubrifiante synthétique à 4 temps formulée avec des additifs de pointe. Produit haut de gamme, il offre une protection extrême, une puissance accrue et améliore le rendement du moteur. Des propriétés détergentes exceptionnelles garantissent un moteur propre à tout moment et minimisent la consommation d'huile. Huile de lubrification pour moteurs hors-bord et jet ski 4 temps. Convient particulièrement aux moteurs avec embrayage humide. Fournit une excellente lubrification à la fois à haute et à basse température. Réduit les dépôts de carbone. Réduit les émissions de gaz d'échappement.",
+      category: "Competition Line - Motos et Moteurs Marins",
+      features: [
+        "Huile lubrifiante synthétique 4 temps",
+        "Formulée avec des additifs de pointe",
+        "Protection extrême et puissance accrue",
+        "Propriétés détergentes exceptionnelles",
+        "Spécialement pour moteurs hors-bord et jet ski 4T",
+        "Compatible avec moteurs à embrayage humide",
+        "Excellente lubrification haute et basse température",
+        "Réduit les dépôts de carbone",
+        "Réduit les émissions de gaz d'échappement"
+      ]
+    },
+    "dinoil-formula-jet-ski-2t": {
+      name: "DINOIL FORMULA JET SKI 2T",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F2703a245c6b94fcdba38452115d57e41?format=webp&width=800",
+      description: "Huile de lubrification de compétition pour les moteurs de course à 2 temps, spécialement formulée pour les Jet Ski. Huile moteur deux temps auto-mélangeuse à base d'esters 100% synthétiques. Développée pour répondre aux exigences des moteurs à haut régime. Formula Jet Ski est spécialement conçu pour augmenter la puissance du moteur. Convient particulièrement à tous les moteurs hors-bord et jet ski 2T. Excellente protection contre la rouille pendant les longues périodes d'hivernage. Réduit les émissions de gaz d'échappement.",
+      category: "Competition Line - Motos et Moteurs Marins",
+      features: [
+        "Huile de compétition pour moteurs 2 temps",
+        "Spécialement formulée pour Jet Ski",
+        "Auto-mélangeuse à base d'esters 100% synthétiques",
+        "Développée pour moteurs à haut régime",
+        "Conçu pour augmenter la puissance du moteur",
+        "Compatible avec tous moteurs hors-bord et jet ski 2T",
+        "Excellente protection contre la rouille",
+        "Protection pendant les longues périodes d'hivernage",
+        "Réduit les émissions de gaz d'échappement"
+      ]
+    },
+    "dinoil-formula-kart-2t": {
+      name: "DINOIL FORMULA KART 2T",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fd3038e7d50a9453fae1c0efcea3f8df0?format=webp&width=800",
+      description: "Huile lubrifiante de compétition pour moteurs de course à 2 temps, spécialement formulée pour les karts. Huile moteur deux temps 100% synthétique à base d'ester. Développée pour répondre aux exigences des courses de karting dans les moteurs à haut régime. Formula Kart 2T est spécialement conçu pour augmenter la puissance du moteur. S'utilise dans tous les types de moteurs de kart à 2 temps. Le pourcentage d'utilisation est déterminé par le fabricant. Réduit le frottement interne du moteur plus que les autres huiles de la même catégorie. Empêche l'encrassement des bougies d'allumage et maintient le moteur plus propre. Excellentes propriétés d'auto-mélange. Excellentes propriétés low-smoke et low-ash.",
+      category: "Competition Line - Motos et Moteurs Marins",
+      features: [
+        "Huile de compétition pour moteurs kart 2 temps",
+        "100% synthétique à base d'ester",
+        "Développée pour courses de karting haut régime",
+        "Spécialement conçu pour augmenter la puissance",
+        "Compatible avec tous types de moteurs kart 2T",
+        "Pourcentage d'utilisation selon fabricant",
+        "Réduit le frottement interne du moteur",
+        "Empêche l'encrassement des bougies",
+        "Maintient le moteur plus propre",
+        "Excellentes propriétés d'auto-mélange",
+        "Propriétés low-smoke et low-ash"
+      ]
+    },
+    "dinoil-formula-mini-2t": {
+      name: "DINOIL FORMULA MINI 2T",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F4551033487034832a83251eeb6a7c81f?format=webp&width=800",
+      description: "Huile lubrifiante de compétition pour moteurs 2 temps, spécialement formulée pour Mini Moto. Huile moteur deux temps auto-mélangeuse à base d'esters 100% synthétiques. Développé pour répondre aux exigences des courses de minimoto pour les moteurs nécessitant un régime élevé. Formula Mini 2T a été spécialement conçue pour augmenter la puissance du moteur. Pour utilisation dans tous les types de moteurs 2 temps Mini Moto. Le pourcentage d'utilisation est déterminé par le fabricant. Réduit le frottement interne du moteur plus que les autres huiles de la même catégorie. Empêche l'encrassement des bougies d'allumage et maintient le moteur plus propre. Excellentes propriétés d'auto-mélange. Excellentes propriétés low-smoke et low-ash.",
+      category: "Competition Line - Motos et Moteurs Marins",
+      features: [
+        "Huile de compétition pour Mini Moto 2 temps",
+        "Auto-mélangeuse à base d'esters 100% synthétiques",
+        "Développée pour courses de minimoto",
+        "Spécialement pour moteurs à régime élevé",
+        "Conçue pour augmenter la puissance du moteur",
+        "Compatible avec tous types moteurs Mini Moto 2T",
+        "Pourcentage d'utilisation selon fabricant",
+        "Réduit le frottement interne du moteur",
+        "Empêche l'encrassement des bougies",
+        "Maintient le moteur plus propre",
+        "Excellentes propriétés d'auto-mélange",
+        "Propriétés low-smoke et low-ash"
+      ]
+    },
+    "dinoil-sae-0w16": {
+      name: "DINOIL SAE 0W/16",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F0fe9146d2324437d93810973bd38a526?format=webp&width=800",
+      description: "Lubrifiant entièrement synthétique doté de la technologie CleanSynto, formulé à partir d'huiles de base PAO (polyalphaoléfines) et de modificateurs spéciaux du coefficient de frottement. Développée pour les moteurs modernes à essence, diesel et turbo diesel, à aspiration naturelle et suralimentés, avec injection directe. Particulièrement adapté aux véhicules hybrides. La formulation spéciale à base de molybdène tri-nucléaire garantit d'excellentes propriétés de friction minimale, des intervalles de vidange prolongés, une consommation de carburant réduite, d'excellentes propriétés de démarrage à froid même à des températures très basses.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant entièrement synthétique",
+        "Technologie CleanSynto avancée",
+        "Huiles de base PAO (polyalphaoléfines)",
+        "Modificateurs spéciaux du coefficient de frottement",
+        "Adapté aux moteurs modernes essence et diesel",
+        "Compatible avec véhicules hybrides",
+        "Formulation à base de molybdène tri-nucléaire",
+        "Propriétés de friction minimale",
+        "Intervalles de vidange prolongés",
+        "Consommation de carburant réduite",
+        "Excellentes propriétés démarrage à froid"
+      ]
+    },
+    "dinoil-sae-0w20": {
+      name: "DINOIL SAE 0W/20",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fd9022ed4ebba488283a9c6b322b81407?format=webp&width=800",
+      description: "Lubrifiant entièrement synthétique doté de la technologie CleanSynto, formulé à partir d'huiles de base PAO (polyalphaoléfines) et de modificateurs spéciaux du coefficient de frottement. Développé pour les moteurs modernes à essence et diesel, à aspiration naturelle et suralimentés, avec injection directe. Les additifs spéciaux garantissent des intervalles de vidange prolongés, d'excellentes performances de démarrage à froid, une protection exceptionnelle du moteur et une économie de carburant améliorée. Il offre une réduction fiable des émissions et une protection du système d'échappement.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant entièrement synthétique",
+        "Technologie CleanSynto",
+        "Huiles de base PAO (polyalphaoléfines)",
+        "Modificateurs spéciaux du coefficient de frottement",
+        "Adapté aux moteurs essence et diesel modernes",
+        "Compatible avec injection directe",
+        "Intervalles de vidange prolongés",
+        "Excellentes performances démarrage à froid",
+        "Protection exceptionnelle du moteur",
+        "Économie de carburant améliorée",
+        "Réduction fiable des émissions",
+        "Protection du système d'échappement"
+      ]
+    },
+    "dinoil-sae-0w30": {
+      name: "DINOIL SAE 0W/30",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F6a424e418ef54e35a0369a7ac73fa622?format=webp&width=800",
+      description: "DINOIL DAYTONA 0W/30 est un lubrifiant 100% synthétique, (mid-SAPS), de nouvelle technologie pour la dernière génération de moteurs diesel qui répondent aux limites d'émission Euro 6. Recommandé pour les véhicules (Fiat, Peugeot, Citroën, Suzuki, Mitsubishi, Honda) équipés d'un filtre à particules et/ou d'un convertisseur catalytique et assurer une plus grande propreté interne avec des intervalles de changement d'huile plus longs.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant 100% synthétique",
+        "Technologie mid-SAPS",
+        "Nouvelle technologie Euro 6",
+        "Dernière génération moteurs diesel",
+        "Recommandé pour Fiat, Peugeot, Citroën",
+        "Compatible Suzuki, Mitsubishi, Honda",
+        "Équipé filtre à particules",
+        "Compatible convertisseur catalytique",
+        "Plus grande propreté interne",
+        "Intervalles de changement prolongés"
+      ]
+    },
+    "dinoil-sae-5w20-ford": {
+      name: "DINOIL SAE 5W/20 FORD / ASIAN CARS",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fb8776563eaf84af491ba5c3d4c5627f9?format=webp&width=800",
+      description: "Lubrifiant entièrement synthétique formulé avec un ensemble d'additifs de pointe qui dépasse les exigences de l'ILSAC GF-4. Sa caractéristique 'conservation de l'énergie' offre un rendement énergétique optimal, une excellente lubrification générale dans des conditions de froid extrême et une réduction des émissions de gaz d'échappement. Particulièrement recommandé pour les nouveaux moteurs de FORD, HONDA, MAZDA, NISSAN, MITSUBISHI, TOYOTA mais aussi adapté pour Jaguar, Land Rover, Mercedes Benz, Porsche, Dodge Viper, Chevrolet, Cadillac.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant entièrement synthétique",
+        "Additifs de pointe ILSAC GF-4",
+        "Caractéristique 'conservation de l'énergie'",
+        "Rendement énergétique optimal",
+        "Excellente lubrification conditions froid extrême",
+        "Réduction émissions gaz d'échappement",
+        "Recommandé pour FORD, HONDA, MAZDA",
+        "Compatible NISSAN, MITSUBISHI, TOYOTA",
+        "Adapté Jaguar, Land Rover, Mercedes Benz",
+        "Compatible Porsche, Dodge Viper, Chevrolet, Cadillac"
+      ]
+    },
+    "dinoil-sae-5w30-audi-vw": {
+      name: "DINOIL SAE 5W/30 AUDI / VW",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F2c53e19f19c6447288d7359502ed879f?format=webp&width=800",
+      description: "Huile moteur entièrement synthétique formulée pour répondre aux spécifications VW les plus exigeantes à ce jour - VW 504.00 et 507.00 - ainsi qu'aux exigences Long Life III. Spécialement conçue pour les moteurs diesel du groupe VAG (Volkswagen, Audi, Seat, Skoda) avec injecteur-pompe équipés de filtres à particules DPF et de convertisseurs catalytiques (TWC). Ne convient pas aux moteurs V10TDI et R5 TDI avant 2007, où la spécification 506.01 est requise.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Huile moteur entièrement synthétique",
+        "Répond aux spécifications VW 504.00 et 507.00",
+        "Compatible avec exigences Long Life III",
+        "Spécialement pour moteurs diesel VAG",
+        "Groupe Volkswagen, Audi, Seat, Skoda",
+        "Équipés de filtres à particules DPF",
+        "Compatible convertisseurs catalytiques TWC",
+        "Moteurs avec injecteur-pompe",
+        "Non compatible V10TDI et R5 TDI avant 2007"
+      ]
+    },
+    "dinoil-sae-5w30-ford-mazda": {
+      name: "DINOIL SAE 5W/30 FORD / MAZDA",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F403678bdc74d449793f8b0b0cfafc78e?format=webp&width=800",
+      description: "Lubrifiant entièrement synthétique formulé avec des additifs de pointe. Spécialement conçu pour les moteurs Ford à essence et diesel équipés de filtres à particules DPF et TWC répondant aux spécifications WSS-M2C913-C/D. Elle offre d'excellentes propriétés d'économie de carburant et des intervalles plus longs entre les changements d'huile. Convient à tous les moteurs à essence et diesel les plus récents de Ford, Toyota, Volvo, Mazda, Jaguar, Range Rover, Rover MG.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant entièrement synthétique",
+        "Formulé avec additifs de pointe",
+        "Spécialement pour moteurs Ford",
+        "Compatible essence et diesel",
+        "Équipés filtres à particules DPF et TWC",
+        "Répond aux spécifications WSS-M2C913-C/D",
+        "Excellentes propriétés économie carburant",
+        "Intervalles changement huile prolongés",
+        "Compatible Ford, Toyota, Volvo, Mazda",
+        "Adapté Jaguar, Range Rover, Rover MG"
+      ]
+    },
+    "dinoil-sae-5w30-gm-opel": {
+      name: "DINOIL SAE 5W/30 GM / OPEL",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F8145c45c9f884bca8d72a89598d7217f?format=webp&width=800",
+      description: "Lubrifiant entièrement synthétique formulé avec des huiles de base de première qualité et un ensemble d'additifs avancés. Spécialement conçu pour les moteurs GM modernes à essence et diesel équipés de filtres à particules. La technologie Low Saps protège les filtres à particules et les dispositifs de post-traitement des gaz d'échappement. Recommandé pour une utilisation dans les derniers moteurs General Motors de Opel, Saab, Chevrolet, Vauxhall, etc.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant entièrement synthétique",
+        "Huiles de base de première qualité",
+        "Ensemble d'additifs avancés",
+        "Spécialement pour moteurs GM modernes",
+        "Compatible essence et diesel",
+        "Équipés de filtres à particules",
+        "Technologie Low Saps",
+        "Protège filtres à particules",
+        "Protection dispositifs post-traitement",
+        "Recommandé pour Opel, Saab, Chevrolet, Vauxhall"
+      ]
+    },
+    "dinoil-sae-5w30-mercedes-bmw": {
+      name: "DINOIL SAE 5W/30 MERCEDES BENZ / BMW",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Feecb554aa3aa4fb99d8b284e5922dda8?format=webp&width=800",
+      description: "Lubrifiant entièrement synthétique formulé avec des huiles de base de première qualité et un ensemble d'additifs avancés. Spécialement conçu pour la nouvelle génération de moteurs à essence et diesel équipés de filtres à particules DPF TWC (Three-Way Catalyst) répondant à la spécification MB 229.51. Sa formule et ses additifs Low SAPS assurent une protection complète des dispositifs de post-traitement des gaz d'échappement et des filtres à particules diesel, un allongement des intervalles de vidange et une économie de carburant pour les véhicules Euro 4 et Euro 5.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant entièrement synthétique",
+        "Huiles de base de première qualité",
+        "Additifs avancés spécialisés",
+        "Nouvelle génération moteurs essence et diesel",
+        "Équipés filtres à particules DPF TWC",
+        "Répond à sp��cification MB 229.51",
+        "Formule et additifs Low SAPS",
+        "Protection complète dispositifs post-traitement",
+        "Allongement intervalles de vidange",
+        "Économie carburant Euro 4 et Euro 5"
+      ]
+    },
+    "dinoil-sae-5w30-psa-fiat": {
+      name: "DINOIL SAE 5W/30 PSA / FIAT",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F78ba41f2f835457185705d49d5266d6e?format=webp&width=800",
+      description: "Lubrifiant entièrement synthétique formulé avec des huiles de base de première qualité et un ensemble d'additifs avancés. Spécialement développé pour les moteurs modernes Fiat PSA essence et diesel équipés de dispositifs de post-traitement des gaz d'échappement répondant à la spécification PSA B 712.290, y compris ceux avec filtres à particules. Il offre d'excellentes caractéristiques d'écoulement à basse température de fonctionnement et une très bonne économie de carburant. Convient pour une utilisation normale et une durée de vie prolongée pour les moteurs Peugeot et Citroën et également pour les véhicules Fiat nécessitant la spécification Fiat 9.55535 S1.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant entièrement synthétique",
+        "Huiles de base de première qualité",
+        "Additifs avancés spécialisés",
+        "Spécialement pour moteurs Fiat PSA",
+        "Compatible essence et diesel",
+        "Dispositifs post-traitement gaz échappement",
+        "Répond à spécification PSA B 712.290",
+        "Compatible filtres à particules",
+        "Excellentes caractéristiques écoulement basse température",
+        "Très bonne économie de carburant",
+        "Adapté Peugeot, Citroën et Fiat"
+      ]
+    },
+    "dinoil-sae-5w30-renault": {
+      name: "DINOIL SAE 5W/30 RENAULT",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fbfdac3b1e16241e88bd640e38e631e98?format=webp&width=800",
+      description: "Lubrifiant formulé avec une huile de base entièrement synthétique et des additifs de pointe. Spécialement conçu pour assurer une protection supérieure des systèmes de post-traitement des moteurs Renault. Offre des propriétés d'économie de carburant extrêmes et des intervalles de changement d'huile prolongés. Convient aux derniers moteurs Renault-Nissan à essence et diesel équipés du TWC (Three Way Catalyst) et est obligatoire pour tous les moteurs équipés d'un filtre à particules.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Huile de base entièrement synthétique",
+        "Additifs de pointe spécialisés",
+        "Spécialement pour moteurs Renault",
+        "Protection supérieure systèmes post-traitement",
+        "Propriétés économie carburant extrêmes",
+        "Intervalles changement huile prolongés",
+        "Compatible moteurs Renault-Nissan",
+        "Équipés TWC (Three Way Catalyst)",
+        "Obligatoire pour moteurs avec filtre à particules",
+        "Compatible essence et diesel"
+      ]
+    },
+    "dinoil-sae-5w40-esp-formula": {
+      name: "DINOIL SAE 5W/40 ESP FORMULA",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fe658bd0e65a74299805960b0686f66f0?format=webp&width=800",
+      description: "Lubrifiant synthétique à 100%. Il s'agit d'une nouvelle formulation basée sur les dernières technologies. Particulièrement adapté aux exigences des moteurs modernes, il assure une plus longue durée de vie du convertisseur catalytique et réduit les émissions de gaz d'échappement. Les propriétés de ce lubrifiant permettent des intervalles de vidange beaucoup plus longs. Il est recommandé pour les moteurs à essence et diesel, qu'ils soient à aspiration naturelle ou à turbocompression, et pour les voitures à injection directe.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Lubrifiant synthétique à 100%",
+        "Nouvelle formulation dernières technologies",
+        "Particulièrement adapté moteurs modernes",
+        "Plus longue durée de vie convertisseur catalytique",
+        "Réduit émissions gaz d'échappement",
+        "Intervalles de vidange prolongés",
+        "Recommandé moteurs essence et diesel",
+        "Compatible aspiration naturelle et turbocompression",
+        "Adapté voitures injection directe"
+      ]
+    },
+    "dinoil-sae-5w40-gas": {
+      name: "DINOIL SAE 5W/40 GAS LPG METHANE",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F92889ad671954a458255bd559f800d17?format=webp&width=800",
+      description: "Pure Power GAS est une huile moteur 100% synthétique conçue pour les moteurs à aspiration naturelle et les moteurs turbocompressés fonctionnant au gaz naturel, au GPL ou au bicarburant (essence+gaz). Il a été mis au point à l'aide de technologies qui garantissent une protection contre l'usure des soupapes. En outre, sa formulation neutralise les composés acides de la combustion, ce qui permet de ne pas altérer les performances du moteur. Ses excellentes capacités de lubrification réduisent considérablement la consommation de carburant et d'huile d'évaporation.",
+      category: "Professional Line - Véhicules",
+      features: [
+        "Huile moteur 100% synthétique",
+        "Conçue pour moteurs aspiration naturelle",
+        "Compatible moteurs turbocompressés",
+        "Fonctionnement gaz naturel, GPL",
+        "Compatible bicarburant (essence+gaz)",
+        "Technologies protection usure soupapes",
+        "Neutralise composés acides combustion",
+        "Maintient performances du moteur",
+        "Excellentes capacités de lubrification",
+        "Réduit consommation carburant et huile"
+      ]
+    },
+    "dinoil-8000-sae-5w30-lsa": {
+      name: "DINOIL 8000 SAE 5W/30 LSA",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F08c6b9a9b55048248c694aae68d7c891?format=webp&width=800",
+      description: "Sa formulation avec des additifs de dernière génération, 100% synthétique, permet de réduire les émissions de cendres sulfatées, de phosphore et de soufre (Low-Saps), assurant une moindre usure du moteur et du turbo compresseur, les protégeant des démarrages à froid et garantissant une plus grande économie de carburant. Il dépasse les exigences en matière de faibles émissions adoptées par les plus grands constructeurs automobiles (Daimler-Chrysler et BMW), qui utilisent des moteurs à essence et diesel, répondant aux normes Euro 4 et équipés d'un filtre à particules.",
+      category: "Multigrade Line - Véhicules",
+      features: [
+        "Formulation 100% synthétique",
+        "Additifs de dernière génération",
+        "Réduit émissions cendres sulfatées, phosphore et soufre",
+        "Technologie Low-Saps",
+        "Moindre usure moteur et turbo compresseur",
+        "Protection démarrages à froid",
+        "Plus grande économie de carburant",
+        "Dépasse exigences faibles émissions",
+        "Conforme Daimler-Chrysler et BMW",
+        "Compatible normes Euro 4",
+        "Adapté filtres à particules"
+      ]
+    },
+    "dinoil-7000-sae-5w30": {
+      name: "DINOIL 7000 SAE 5W/30",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fb59d873abdda4f288c4fcbf2e2840099?format=webp&width=800",
+      description: "Lubrifiant synthétique à 100% pour les moteurs à essence et diesel haute performance, turbocompressés multisoupapes, à injection directe et ceux fonctionnant dans les conditions les plus difficiles. Réduit considérablement la consommation de carburant. Améliore la puissance du moteur. Dépasse largement toutes les exigences et les tests de moteur prescrits par les principaux constructeurs automobiles.",
+      category: "Multigrade Line - Véhicules",
+      features: [
+        "Lubrifiant synthétique à 100%",
+        "Pour moteurs essence et diesel haute performance",
+        "Compatible turbocompressés multisoupapes",
+        "Adapté injection directe",
+        "Fonctionne dans conditions difficiles",
+        "Réduit considérablement consommation carburant",
+        "Améliore puissance du moteur",
+        "Dépasse exigences constructeurs automobiles",
+        "Tests moteur approuvés"
+      ]
+    },
+    "dinoil-6000-sae-5w40-tdi": {
+      name: "DINOIL 6000 SAE 5W/40 TDI",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F96c0c5cfa50b4aa0a9971a563b246424?format=webp&width=800",
+      description: "Lubrifiant 100% synthétique. Il s'agit d'une nouvelle formulation basée sur les dernières technologies. Particulièrement adapté aux exigences des moteurs modernes, il assure une plus longue durée de vie du convertisseur catalytique et réduit les émissions de gaz d'échappement. Les propriétés de ce lubrifiant permettent des intervalles de vidange beaucoup plus longs. Il est recommandé pour les moteurs à aspiration naturelle et à turbocompression ainsi que pour les moteurs diesel à injection directe.",
+      category: "Multigrade Line - Véhicules",
+      features: [
+        "Lubrifiant 100% synthétique",
+        "Nouvelle formulation dernières technologies",
+        "Particulièrement adapté moteurs modernes",
+        "Plus longue durée de vie convertisseur catalytique",
+        "Réduit émissions gaz d'échappement",
+        "Intervalles vidange prolongés",
+        "Recommandé aspiration naturelle et turbocompression",
+        "Adapté moteurs diesel injection directe"
+      ]
+    },
+    "dinoil-6000-sae-5w40-plus": {
+      name: "DINOIL 6000 SAE 5W/40 PLUS",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F356f1878a0d74593ab23faaf20ae592d?format=webp&width=800",
+      description: "Lubrifiant synthétique à 100% pour les moteurs à essence et diesel haute performance, multisoupapes, turbocompressés, avec turbocompression, injection directe et pour ceux qui travaillent dans les conditions les plus difficiles. Réduit considérablement la consommation de carburant. Améliore la puissance du moteur. Dépasse de loin toutes les exigences et les tests de moteur prescrits par les principaux constructeurs automobiles.",
+      category: "Multigrade Line - Véhicules",
+      features: [
+        "Lubrifiant synthétique à 100%",
+        "Moteurs essence et diesel haute performance",
+        "Compatible multisoupapes turbocompressés",
+        "Adapté injection directe",
+        "Fonctionne conditions difficiles",
+        "Réduit considérablement consommation carburant",
+        "Améliore puissance du moteur",
+        "Dépasse exigences constructeurs",
+        "Tests moteur validés"
+      ]
+    },
+    "dinoil-5000-sae-10w40-formula-b4": {
+      name: "DINOIL 5000 SAE 10W/40 FORMULA B4",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F8b8b7bd3ddfb43d99884362d4c6b6b87?format=webp&width=800",
+      description: "Lubrifiant semi-synthétique conforme aux dernières normes internationales et approuvé par les principaux fabricants. Son utilisation est recommandée pour les voitures, les fourgonnettes, les SUV et les camions légers fonctionnant à la fois au turbo diesel et à l'essence, multisoupapes et turbocompressés, ainsi que pour les véhicules équipés d'un convertisseur catalytique. L'excellente technologie d'additifs permet de meilleurs démarrages à froid, réduit l'usure du moteur au minimum. Réduction des coûts d'entretien.",
+      category: "Multigrade Line - Véhicules",
+      features: [
+        "Lubrifiant semi-synthétique",
+        "Conforme dernières normes internationales",
+        "Approuvé par principaux fabricants",
+        "Recommandé voitures, fourgonnettes, SUV",
+        "Compatible camions légers",
+        "Turbo diesel et essence",
+        "Multisoupapes et turbocompressés",
+        "Compatible convertisseur catalytique",
+        "Meilleurs démarrages à froid",
+        "Réduit usure moteur au minimum",
+        "Réduction coûts entretien"
+      ]
+    },
+    "dinoil-5000-sae-10w40-semi-synth": {
+      name: "DINOIL 5000 SAE 10W/40 SEMI-SYNTH",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F18eb6efddafe488096e01d0a56b96aef?format=webp&width=800",
+      description: "Lubrifiant semi-synthétique conforme aux dernières normes internationales et approuvé par les principaux fabricants. Son utilisation est recommandée pour les moteurs essence et diesel, multivalves, suralimentés et pour les véhicules à convertisseur catalytique. Les excellentes capacités de nettoyage contrecarrent efficacement la formation de dépôts dans le turbo et sur les pistons et assurent une plus grande propreté du moteur, adaptée aux systèmes avec système méthane ou GPL.",
+      category: "Multigrade Line - Véhicules",
+      features: [
+        "Lubrifiant semi-synthétique",
+        "Conforme dernières normes internationales",
+        "Approuvé principaux fabricants",
+        "Recommandé moteurs essence et diesel",
+        "Compatible multivalves suralimentés",
+        "Adapté véhicules convertisseur catalytique",
+        "Excellentes capacités de nettoyage",
+        "Contrecarre formation dépôts turbo et pistons",
+        "Plus grande propreté du moteur",
+        "Compatible systèmes méthane ou GPL"
       ]
     }
   };
@@ -321,7 +729,7 @@ export default function ProductDetail() {
               </h3>
               <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Découvrez d'autres produits de la même gamme {isMotoProduct ? 'Competition Line - Moto' : 'Competition Line - Véhicules'}
+                Découvrez d'autres produits de la même gamme {categoryName}
               </p>
             </div>
 

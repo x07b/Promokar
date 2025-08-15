@@ -1,26 +1,29 @@
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, ArrowRight, Trophy, Bike, Shield, Star, Zap, Award, Clock, MapPin, Check } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Trophy, Waves, Shield, Star, Zap, Award, Check, Ship } from "lucide-react";
 
-export default function CompetitionLineMoto() {
+export default function CompetitionLineMotosMoteurs() {
   const competitionProducts = [
-    // Products will be added here one by one as provided
     {
-      id: "dinoil-gp-competition-5w40",
-      name: "DINOIL GP COMPETITION 5W/40",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F1ca0949e89764f508ab3c74fe08ee0a0%2Fc958531a9c3a40eba552479b5bbdfdaf?format=webp&width=800"
+      id: "dinoil-formula-jet-ski-10w40",
+      name: "DINOIL FORMULA JET SKI 10W/40",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Ff980eebbbf4e48918d9952d0d19cdbb2?format=webp&width=800"
     },
     {
-      id: "dinoil-gp-competition-10w60",
-      name: "DINOIL GP COMPETITION 10W/60",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F1ca0949e89764f508ab3c74fe08ee0a0%2F8429a284dcb541d798effcbb2ad6208f?format=webp&width=800"
+      id: "dinoil-formula-jet-ski-2t",
+      name: "DINOIL FORMULA JET SKI 2T",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F2703a245c6b94fcdba38452115d57e41?format=webp&width=800"
     },
     {
-      id: "dinoil-gp-competition-15w50",
-      name: "DINOIL GP COMPETITION 15W/50",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F09ce9b8c9949436a8df108105b2c784b?format=webp&width=800",
-      description: "DINOIL GP COMPETITION 4T -15W/50, huile 100 % synthétique pour les moteurs 4T. Développé avec des additifs de dernière technologie. Réduit la friction des pièces mobiles. L'efficacité rigoureuse des additifs nettoyants et dispersants garantit que le moteur est propre et exempt de dépôts . Cette huile convient également pour la lubrification des moteurs à embrayage humide. Faible consommation d'huile , même à des charges/régimes élevés. Prolonge la durée de vie du moteur et du convertisseur catalytique. Répond aux exigences OEM les plus strictes."
+      id: "dinoil-formula-kart-2t",
+      name: "DINOIL FORMULA KART 2T",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fd3038e7d50a9453fae1c0efcea3f8df0?format=webp&width=800"
+    },
+    {
+      id: "dinoil-formula-mini-2t",
+      name: "DINOIL FORMULA MINI 2T",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F4551033487034832a83251eeb6a7c81f?format=webp&width=800"
     }
   ];
 
@@ -31,9 +34,9 @@ export default function CompetitionLineMoto() {
       description: "Conçu pour les conditions de compétition les plus exigeantes"
     },
     {
-      icon: Shield,
-      title: "Protection Maximale",
-      description: "Protection optimale contre l'usure et la surchauffe"
+      icon: Waves,
+      title: "Protection Marine",
+      description: "Résistance à l'eau salée et aux conditions marines"
     },
     {
       icon: Zap,
@@ -48,12 +51,12 @@ export default function CompetitionLineMoto() {
   ];
 
   const benefits = [
-    "Résistance extrême à la température",
-    "Réduction des frottements pour plus de puissance",
-    "Stabilité thermique exceptionnelle",
-    "Protection contre l'usure prématurée",
-    "Performances constantes en conditions extrêmes",
-    "Compatible avec tous les carburants de course"
+    "Huiles 100% synthétiques haute performance",
+    "Réduction des frottements internes",
+    "Protection contre l'encrassement des bougies",
+    "Excellente résistance aux hautes températures",
+    "Propriétés auto-mélangeuses optimisées",
+    "Faibles émissions de fumée et de cendres"
   ];
 
   return (
@@ -64,8 +67,8 @@ export default function CompetitionLineMoto() {
       <section className="relative bg-gradient-to-br from-[#02173C] to-[#02173C]/90 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" 
-            alt="Competition Line Moto"
+            src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80" 
+            alt="Competition Line Motos et Moteurs Marins"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#02173C]/80 to-[#02173C]/60"></div>
@@ -91,7 +94,7 @@ export default function CompetitionLineMoto() {
             <ChevronRight size={16} className="text-gray-400" />
             <span className="text-gray-300">Competition Line</span>
             <ChevronRight size={16} className="text-gray-400" />
-            <span className="text-[#BE941B] font-medium">Moto</span>
+            <span className="text-[#BE941B] font-medium">Motos et Moteurs Marins</span>
           </nav>
 
           <div className="text-center">
@@ -101,14 +104,14 @@ export default function CompetitionLineMoto() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              <span className="block">Motos de</span>
-              <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">Compétition</span>
+              <span className="block">Motos et Moteurs</span>
+              <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">Marins</span>
             </h1>
             
             <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-white to-[#BE941B] mx-auto mb-8 rounded-full"></div>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Lubrifiants haute performance conçus pour les motos de compétition.
+              Lubrifiants haute performance conçus pour motos et moteurs marins de compétition.
               <br />
               <span className="text-[#BE941B] font-medium">Excellence et fiabilité pour les conditions extrêmes.</span>
             </p>
@@ -154,14 +157,14 @@ export default function CompetitionLineMoto() {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Produits haute performance pour motos de compétition et sport motocycliste
+              Produits haute performance pour motos et moteurs marins de compétition
             </p>
           </div>
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {competitionProducts.map((product, index) => (
-              <Link key={product.id} to={`/produits/competition-line/moto/${product.id}`} className="group cursor-pointer">
+              <Link key={product.id} to={`/produits/competition-line/motos-moteurs-marins/${product.id}`} className="group cursor-pointer">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
                   
                   {/* Product Image */}
@@ -239,8 +242,8 @@ export default function CompetitionLineMoto() {
             <div className="relative">
               <div className="aspect-square relative overflow-hidden rounded-3xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"
-                  alt="Competition Line Moto" 
+                  src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80"
+                  alt="Competition Line Motos et Moteurs Marins" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#BE941B]/20 to-transparent"></div>
@@ -250,7 +253,7 @@ export default function CompetitionLineMoto() {
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-2xl border border-gray-100">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-[#BE941B]/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <Bike className="w-6 h-6 text-[#BE941B]" />
+                    <Ship className="w-6 h-6 text-[#BE941B]" />
                   </div>
                   <p className="text-[#02173C] font-bold text-sm">Performance</p>
                   <p className="text-gray-600 text-xs">Niveau compétition</p>
