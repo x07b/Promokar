@@ -269,14 +269,9 @@ export default function Produits() {
 
                           {/* Title */}
                           <div className="p-6 text-center">
-                            <h4 className="text-xl font-black text-[#02173C] mb-4 group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
+                            <h4 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
                               {subcategory.title}
                             </h4>
-
-                            {/* Découvrir Button */}
-                            <button className="bg-[#BE941B] hover:bg-[#02173C] text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 transform group-hover:scale-105 shadow-lg hover:shadow-xl">
-                              DÉCOUVRIR
-                            </button>
                           </div>
                         </div>
                       </Link>
@@ -310,14 +305,9 @@ export default function Produits() {
 
                         {/* Title */}
                         <div className="p-6 text-center">
-                          <h3 className="text-lg font-black text-[#02173C] mb-4 group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
+                          <h3 className="text-lg font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
                             {category.title}
                           </h3>
-
-                          {/* Découvrir Button */}
-                          <button className="bg-[#BE941B] hover:bg-[#02173C] text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 transform group-hover:scale-105 shadow-lg hover:shadow-xl">
-                            DÉCOUVRIR
-                          </button>
                         </div>
                       </div>
                     </Link>
