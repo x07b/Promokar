@@ -9,7 +9,7 @@ export default function MultigradeLineVehicules() {
       id: "dinoil-4000-sae-20w60-xm",
       name: "DINOIL 4000 SAE 20W/60 XM",
       image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F9e67a123dffe4dff888791f96a43e66d?format=webp&width=800",
-      description: "Lubrifiant adapté à tous les types de moteurs diesel et turbodiesel. Composé avec des additifs spéciaux qui permettent d'empêcher la formation de boues, assurer une lubrification parfaite et réduire les émissions de gaz d'��chappement. Son utilisation est particulièrement adaptée pour les moteurs usés. Il se caractérise par sa puissance détergente dispersante élevée et sa protection du moteur."
+      description: "Lubrifiant adapté à tous les types de moteurs diesel et turbodiesel. Composé avec des additifs spéciaux qui permettent d'empêcher la formation de boues, assurer une lubrification parfaite et réduire les émissions de gaz d'échappement. Son utilisation est particulièrement adaptée pour les moteurs usés. Il se caractérise par sa puissance détergente dispersante élevée et sa protection du moteur."
     },
     {
       id: "dinoil-4000-sae-20w50-xm",
@@ -165,30 +165,34 @@ export default function MultigradeLineVehicules() {
             </p>
           </div>
 
-          {/* Migration Notice */}
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-[#BE941B]/10 to-[#02173C]/10 border border-[#BE941B]/30 rounded-3xl p-12 text-center">
-              <div className="w-20 h-20 bg-[#BE941B]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ArrowRight size={32} className="text-[#BE941B]" />
-              </div>
+          {/* Products Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {multigradeProducts.map((product, index) => (
+              <Link key={product.id} to={`/produits/multigrade-line/vehicules/${product.id}`} className="group cursor-pointer">
+                <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
 
-              <h3 className="text-3xl font-black text-[#02173C] mb-4">
-                Produits D��placés
-              </h3>
+                  {/* Product Image */}
+                  <div className="aspect-square relative bg-white p-4">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
 
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Tous les produits de la gamme Multigrade Line Véhicules ont été reclassifiés
-                et sont maintenant disponibles dans notre nouvelle gamme <strong>Premium Line Véhicules</strong>.
-              </p>
-
-              <Link
-                to="/produits/premium-line/vehicules"
-                className="group inline-flex items-center bg-[#BE941B] hover:bg-[#02173C] text-white px-8 py-4 rounded-2xl transition-all duration-300 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                <span>Voir Premium Line Véhicules</span>
-                <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
+                  {/* Product Info */}
+                  <div className="p-6 text-center">
+                    <h1 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide mb-4">
+                      {product.name}
+                    </h1>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {product.description.substring(0, 120)}...
+                    </p>
+                  </div>
+                </div>
               </Link>
-            </div>
+            ))}
           </div>
 
           {/* Back to Categories */}
