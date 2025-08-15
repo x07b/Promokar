@@ -4,38 +4,8 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ArrowRight, Trophy, Car, Shield, Star, Zap, Award, Check } from "lucide-react";
 
 export default function MultigradeLineVehicules() {
-  const multigradeProducts = [
-    {
-      id: "dinoil-8000-sae-5w30-lsa",
-      name: "DINOIL 8000 SAE 5W/30 LSA",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F08c6b9a9b55048248c694aae68d7c891?format=webp&width=800"
-    },
-    {
-      id: "dinoil-7000-sae-5w30",
-      name: "DINOIL 7000 SAE 5W/30",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fb59d873abdda4f288c4fcbf2e2840099?format=webp&width=800"
-    },
-    {
-      id: "dinoil-6000-sae-5w40-tdi",
-      name: "DINOIL 6000 SAE 5W/40 TDI",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F96c0c5cfa50b4aa0a9971a563b246424?format=webp&width=800"
-    },
-    {
-      id: "dinoil-6000-sae-5w40-plus",
-      name: "DINOIL 6000 SAE 5W/40 PLUS",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F356f1878a0d74593ab23faaf20ae592d?format=webp&width=800"
-    },
-    {
-      id: "dinoil-5000-sae-10w40-formula-b4",
-      name: "DINOIL 5000 SAE 10W/40 FORMULA B4",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F8b8b7bd3ddfb43d99884362d4c6b6b87?format=webp&width=800"
-    },
-    {
-      id: "dinoil-5000-sae-10w40-semi-synth",
-      name: "DINOIL 5000 SAE 10W/40 SEMI-SYNTH",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F18eb6efddafe488096e01d0a56b96aef?format=webp&width=800"
-    }
-  ];
+  // Products have been moved to Premium Line Vehicules category
+  const multigradeProducts = [];
 
   const features = [
     {
