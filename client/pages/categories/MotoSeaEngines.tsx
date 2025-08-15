@@ -1,90 +1,67 @@
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, ArrowRight, Trophy, Car, Shield, Star, Zap, Award, Check, Anchor, Bike } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Trophy, Waves, Shield, Star, Zap, Award, Check, Ship, Bike, Anchor } from "lucide-react";
 
 export default function MotoSeaEngines() {
   const motoSeaProducts = [
-    // 2T Products
     {
       id: "dinoil-2t-competition-full-synth",
       name: "DINOIL PREMIUM 2T MOTO COMPETITION FULL SYNTH",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F2bfc03518f6145e0b7e2eebdb56aedf9?format=webp&width=800",
-      category: "2T",
-      type: "Premium",
-      description: "Huile entièrement synthétique pour motos de course à deux temps. Il doit être mélangé à l'essence dans une proportion inférieure à 3%. Il garantit d'excellents résultats, tant sur les moteurs lubrifiés avec un mélange prêt à l'emploi que sur ceux équipés d'un système séparé où l'huile est injectée directement dans le collecteur d'admission ou dans le carburateur lui-même. Réduit la fumée d'échappement."
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F2bfc03518f6145e0b7e2eebdb56aedf9?format=webp&width=800"
     },
     {
       id: "dinoil-2t-semi-synth",
       name: "DINOIL PREMIUM 2T MOTO SEMI SYNTH",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Ffdb945b4ea484baa964640a84c2222f8?format=webp&width=800",
-      category: "2T",
-      type: "Premium",
-      description: "Nouveau lubrifiant semi-synthétique qui permet une faible émission de gaz d'échappement tout en respectant les normes Jaso. Idéal pour les moteurs à deux temps, il possède la particularité de réduire la consommation en améliorant la lubrification, tout en protégeant les pièces."
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Ffdb945b4ea484baa964640a84c2222f8?format=webp&width=800"
     },
     {
       id: "dinoil-2t-mineral",
       name: "DINOIL MULTIGRADE 2T MINERAL",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F71dd56287f2943ce9a11e080e13f200d?format=webp&width=800",
-      category: "2T",
-      type: "Multigrade",
-      description: "Huile de mélange à base minérale, de bonne qualité, spécialement conçue pour la lubrification des moteurs à deux temps refroidis par air. Grâce à sa technologie appropriée correctement équilibré, il garantit un bon pouvoir lubrifiant et anti-usure, très peu de dépôts dans la chambre de combustion, propreté maximale de la bougie d'allumage et excellente transmission de la puissance du moteur."
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F71dd56287f2943ce9a11e080e13f200d?format=webp&width=800"
     },
     {
       id: "dinoil-2t-outboard",
       name: "DINOIL MULTIGRADE 2T OUTBOARD",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fa8c7be674a9c482ab7a8315cb3b9572c?format=webp&width=800",
-      category: "2T",
-      type: "Multigrade",
-      description: "Lubrifiant spécial nouvellement formulé pour les moteurs hors-bord à 2 temps. Grâce à sa formule spéciale respectueuse de l'environnement, il ne pollue pas l'eau et le sol en cas de fuite. Et convient pour une utilisation dans les bateaux, les traîneaux et les motos équipés de moteurs refroidis par eau avec système d'injection avec et sans mélangeur. Misce jusqu'à 100:1. Répond à la spécification NMMA TC-W3."
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fa8c7be674a9c482ab7a8315cb3b9572c?format=webp&width=800"
     },
-    // 4T Products
     {
       id: "dinoil-4t-5w40-competition",
       name: "DINOIL PREMIUM 4T MOTO 5W/40 COMPETITION",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fd74c64a6787e4a5db310f86d3483718f?format=webp&width=800",
-      category: "4T",
-      type: "Premium",
-      description: "Lubrifiant synthétique pour moteurs à essence à 4 temps, spécialement conçu pour répondre aux exigences des moteurs de motos modernes à 4 temps à haute performance, avec refroidissement par air ou par eau. Il offre une excellente protection pour le moteur, la boîte de vitesses et les embrayages humides utilisés dans les moteurs à 4 temps. Il garantit une fiabilité maximale, même dans des conditions de fonctionnement sévères et à des températures élevées."
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fd74c64a6787e4a5db310f86d3483718f?format=webp&width=800"
     },
     {
       id: "dinoil-4t-10w40-synthetic",
       name: "DINOIL PREMIUM 4T MOTO 10W/40 SYNTHETIC",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F9d975f4f9051465d90f4b6cc532f5557?format=webp&width=800",
-      category: "4T",
-      type: "Premium",
-      description: "Lubrifiant semi-synthétique formulé pour les moteurs à essence à 4 temps. Développée spécifiquement pour répondre aux exigences des moteurs de motos modernes et performants à 4 temps, avec refroidissement par air ou par eau. Offre une excellente protection pour le moteur, la boîte de vitesses et les embrayages humides utilisés dans les moteurs de motos à 4 temps. Garantit une fiabilité maximale, même dans des conditions de fonctionnement difficiles et à des températures élevées."
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F9d975f4f9051465d90f4b6cc532f5557?format=webp&width=800"
     },
     {
       id: "dinoil-4t-20w50-multigrade",
       name: "DINOIL MULTIGRADE 4T MOTO 20W/50",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F92d0ddc310df4694a0819b87f815552d?format=webp&width=800",
-      category: "4T",
-      type: "Multigrade",
-      description: "Lubrifiant multigrade haute performance pour moteurs à essence à quatre temps. Le seuil de viscosité SAE 20W-50 et l'additif ciblé en font le produit idéal pour les applications où les vitesses et les températures élevées sont fréquentes et mettent le lubrifiant à l'épreuve. Excellente propreté du moteur grâce �� l'additif détergent-dispersant. Fortes caractéristiques anti-usure, particulièrement requises dans les utilisations professionnelles sévères."
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F92d0ddc310df4694a0819b87f815552d?format=webp&width=800"
     }
   ];
 
   const features = [
     {
       icon: Bike,
-      title: "Moto 2T & 4T",
-      description: "Gamme complète pour moteurs 2 temps et 4 temps"
+      title: "Performance Moto",
+      description: "Conçu pour les moteurs 2T et 4T haute performance"
     },
     {
-      icon: Anchor,
-      title: "Moteurs Marins",
-      description: "Spécialement formulés pour les moteurs hors-bord"
+      icon: Waves,
+      title: "Protection Marine",
+      description: "Résistance à l'eau salée et aux conditions marines"
     },
     {
-      icon: Trophy,
-      title: "Performance Racing",
-      description: "Formules compétition pour performances extrêmes"
+      icon: Zap,
+      title: "Technologie Avancée",
+      description: "Formules synthétiques et semi-synthétiques de pointe"
     },
     {
-      icon: Shield,
-      title: "Protection Environnementale",
-      description: "Formules respectueuses de l'environnement marin"
+      icon: Award,
+      title: "Normes Certifiées",
+      description: "Conforme aux standards API, JASO et NMMA"
     }
   ];
 
@@ -94,14 +71,8 @@ export default function MotoSeaEngines() {
     "Protection moteur, boîte et embrayage intégrée",
     "Résistance aux températures extrêmes",
     "Compatibilité environnementale marine",
-    "Normes API, JASO et NMMA"
+    "Normes API, JASO et NMMA respectées"
   ];
-
-  // Group products by category
-  const productsByCategory = {
-    "2T": motoSeaProducts.filter(p => p.category === "2T"),
-    "4T": motoSeaProducts.filter(p => p.category === "4T")
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -146,8 +117,8 @@ export default function MotoSeaEngines() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              <span className="block">Moto and</span>
-              <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">Sea Engines</span>
+              <span className="block">Moto and Sea</span>
+              <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">Engines</span>
             </h1>
             
             <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-white to-[#BE941B] mx-auto mb-8 rounded-full"></div>
@@ -203,53 +174,30 @@ export default function MotoSeaEngines() {
             </p>
           </div>
 
-          {/* Products by Category */}
-          <div className="space-y-16 max-w-7xl mx-auto">
-            {Object.entries(productsByCategory).map(([category, products]) => (
-              <div key={category}>
-                <div className="text-center mb-12">
-                  <h3 className="text-3xl md:text-4xl font-black text-[#02173C] mb-4">
-                    Moteurs <span className="text-[#BE941B]">{category}</span>
-                  </h3>
-                  <div className="w-16 h-1 bg-[#BE941B] mx-auto rounded-full"></div>
+          {/* Products Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {motoSeaProducts.map((product, index) => (
+              <Link key={product.id} to={`/produits/moto-sea-engines/${product.id}`} className="group cursor-pointer">
+                <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
+                  
+                  {/* Product Image */}
+                  <div className="aspect-square relative bg-white p-4">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  {/* Product Info */}
+                  <div className="p-6 text-center">
+                    <h1 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
+                      {product.name}
+                    </h1>
+                  </div>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  {products.map((product, index) => (
-                    <Link key={product.id} to={`/produits/moto-sea-engines/${product.id}`} className="group cursor-pointer">
-                      <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100 relative">
-                        
-                        {/* Category Badge */}
-                        <div className="absolute top-4 left-4 z-10">
-                          <div className="bg-gradient-to-r from-[#BE941B] to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide shadow-lg">
-                            {product.category} {product.type}
-                          </div>
-                        </div>
-                        
-                        {/* Product Image */}
-                        <div className="aspect-square relative bg-white p-4">
-                          <img
-                            src={product.image}
-                            alt={product.name}
-                            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        
-                        {/* Product Info */}
-                        <div className="p-6 text-center">
-                          <h1 className="text-lg font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide mb-3 leading-tight">
-                            {product.name}
-                          </h1>
-                          <p className="text-sm text-gray-600 leading-relaxed">
-                            {product.description.substring(0, 100)}...
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
 
