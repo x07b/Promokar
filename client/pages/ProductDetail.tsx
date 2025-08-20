@@ -1919,48 +1919,6 @@ export default function ProductDetail() {
         </div>
       </section>
 
-      {/* Similar Products Section */}
-      {similarProducts.length > 0 && (
-        <section className="py-20 bg-gradient-to-br from-white to-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
-                Produits <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Similaires</span>
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Découvrez d'autres produits de la gamme {getCategoryDisplayName(currentCategory)}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {similarProducts.map((similarProduct) => (
-                <Link
-                  key={similarProduct.id}
-                  to={`/produits/${currentCategory}/${similarProduct.id}`}
-                  className="group"
-                >
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
-                    <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
-                      <img 
-                        src={similarProduct.image}
-                        alt={similarProduct.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-sm font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide text-center leading-tight">
-                        {similarProduct.name}
-                      </h3>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Find Dealer Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">

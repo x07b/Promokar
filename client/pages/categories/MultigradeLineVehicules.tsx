@@ -6,34 +6,28 @@ import { ChevronLeft, ChevronRight, ArrowRight, Trophy, Car, Shield, Star, Zap, 
 export default function MultigradeLineVehicules() {
   const multigradeProducts = [
     {
-      id: "dinoil-8000-sae-5w30-lsa",
-      name: "DINOIL 8000 SAE 5W/30 LSA",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F08c6b9a9b55048248c694aae68d7c891?format=webp&width=800"
+      id: "dinoil-4000-sae-20w60-xm",
+      name: "DINOIL 4000 SAE 20W/60 XM",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F9e67a123dffe4dff888791f96a43e66d?format=webp&width=800",
+      description: "Lubrifiant adapté à tous les types de moteurs diesel et turbodiesel. Composé avec des additifs spéciaux qui permettent d'empêcher la formation de boues, assurer une lubrification parfaite et réduire les émissions de gaz d'échappement. Son utilisation est particulièrement adaptée pour les moteurs usés. Il se caractérise par sa puissance détergente dispersante élevée et sa protection du moteur."
     },
     {
-      id: "dinoil-7000-sae-5w30",
-      name: "DINOIL 7000 SAE 5W/30",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fb59d873abdda4f288c4fcbf2e2840099?format=webp&width=800"
+      id: "dinoil-4000-sae-20w50-xm",
+      name: "DINOIL 4000 SAE 20W/50 XM", 
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F0f881515469843f8bb243a88fead08f3?format=webp&width=800",
+      description: "Lubrifiant adapté à tous les types de moteurs diesel et turbodiesel. Composé avec des additifs spéciaux qui permettent d'empêcher la formation de boues, assurer une lubrification parfaite et réduire les émissions de gaz d'échappement. Son utilisation est particulièrement adaptée pour les moteurs usés. Il se caractérise par sa puissance détergente dispersante élevée et sa protection du moteur."
     },
     {
-      id: "dinoil-6000-sae-5w40-tdi",
-      name: "DINOIL 6000 SAE 5W/40 TDI",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F96c0c5cfa50b4aa0a9971a563b246424?format=webp&width=800"
+      id: "dinoil-3000-sae-15w40-td",
+      name: "DINOIL 3000 SAE 15W/40 TD",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F15cfe440baff4b57bc637a69305d0178?format=webp&width=800",
+      description: "Lubrifiant multigrade d'excellente qualité adapté aux moteurs diesel à aspiration naturelle et turbo. Sa formulation avec des additifs de haute qualité permet de maintenir les pistons extrêmement propres, sans encrassement lié à la combustion, tout en assurant une excellente performance et protection du moteur. Les propriétés antifriction et antioxydantes de ce lubrifiant permettent de prolonger les intervalles de vidange."
     },
     {
-      id: "dinoil-6000-sae-5w40-plus",
-      name: "DINOIL 6000 SAE 5W/40 PLUS",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F356f1878a0d74593ab23faaf20ae592d?format=webp&width=800"
-    },
-    {
-      id: "dinoil-5000-sae-10w40-formula-b4",
-      name: "DINOIL 5000 SAE 10W/40 FORMULA B4",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F8b8b7bd3ddfb43d99884362d4c6b6b87?format=webp&width=800"
-    },
-    {
-      id: "dinoil-5000-sae-10w40-semi-synth",
-      name: "DINOIL 5000 SAE 10W/40 SEMI-SYNTH",
-      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F18eb6efddafe488096e01d0a56b96aef?format=webp&width=800"
+      id: "dinoil-3000-sae-15w40-sm",
+      name: "DINOIL 3000 SAE 15W/40 SM",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F24926bd727384ae5a39e8a7cf89e4793?format=webp&width=800",
+      description: "Lubrifiant multigrade pour les moteurs de technologie moderne et ancienne avec et sans convertisseur catalytique. Elle convient aux moteurs à essence et diesel et offre une protection maximale par rapport aux autres huiles de sa catégorie. Fabriqué à partir de matières premières de pointe, il garantit une fiabilité totale dans toutes les conditions de service. La forte résistance à l'oxydation permet une performance durable, même aux températures de fonctionnement les plus extrêmes."
     }
   ];
 
@@ -172,7 +166,7 @@ export default function MultigradeLineVehicules() {
           </div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {multigradeProducts.map((product, index) => (
               <Link key={product.id} to={`/produits/multigrade-line/vehicules/${product.id}`} className="group cursor-pointer">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">

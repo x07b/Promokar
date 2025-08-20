@@ -1,66 +1,72 @@
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, ArrowRight, Trophy, Truck, Shield, Star, Zap, Award, Check } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Trophy, Car, Shield, Star, Zap, Award, Check, Crown } from "lucide-react";
 
-export default function PoidsLourds() {
-  const poidsLourdsProducts = [
+export default function PremiumLineVehicules() {
+  const premiumProducts = [
     {
-      id: "dinoil-5w30-euro-truck",
-      name: "DINOIL 5W/30 EURO TRUCK",
-      code: "4357",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F81c75ce1704e488b883cc9a54552d742?format=webp&width=800"
+      id: "dinoil-8000-sae-5w30-lsa",
+      name: "DINOIL 8000 SAE 5W/30 LSA",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F08c6b9a9b55048248c694aae68d7c891?format=webp&width=800"
     },
     {
-      id: "dinoil-10w40-truck-low-saps",
-      name: "DINOIL 10W/40 TRUCK LOW SAPS SYNTH TECH",
-      code: "4364",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fe2ed82f897c94d23918320cee922d255?format=webp&width=800"
+      id: "dinoil-7000-sae-5w30",
+      name: "DINOIL 7000 SAE 5W/30",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2Fb59d873abdda4f288c4fcbf2e2840099?format=webp&width=800"
     },
     {
-      id: "dinoil-10w40-truck-shpd",
-      name: "DINOIL 10W/40 TRUCK SHPD SYNTH TECH",
-      code: "4388",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F25ea035d7a95485abfb2535943b249bc?format=webp&width=800"
+      id: "dinoil-6000-sae-5w40-tdi",
+      name: "DINOIL 6000 SAE 5W/40 TDI",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F96c0c5cfa50b4aa0a9971a563b246424?format=webp&width=800"
     },
     {
-      id: "dinoil-10w40-truck-uhpdo",
-      name: "DINOIL 10W/40 TRUCK UHPDO SYNTH TECH",
-      code: "4371",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F25ea035d7a95485abfb2535943b249bc?format=webp&width=800"
+      id: "dinoil-6000-sae-5w40-plus",
+      name: "DINOIL 6000 SAE 5W/40 PLUS",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F356f1878a0d74593ab23faaf20ae592d?format=webp&width=800"
+    },
+    {
+      id: "dinoil-5000-sae-10w40-formula-b4",
+      name: "DINOIL 5000 SAE 10W/40 FORMULA B4",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F8b8b7bd3ddfb43d99884362d4c6b6b87?format=webp&width=800"
+    },
+    {
+      id: "dinoil-5000-sae-10w40-semi-synth",
+      name: "DINOIL 5000 SAE 10W/40 SEMI-SYNTH",
+      image: "https://cdn.builder.io/api/v1/image/assets%2Fe98689421e434387bc8e35ec01be1ffb%2F18eb6efddafe488096e01d0a56b96aef?format=webp&width=800"
     }
   ];
 
   const features = [
     {
-      icon: Truck,
-      title: "Poids Lourds",
-      description: "Spécialement conçu pour les moteurs diesel lourds"
+      icon: Crown,
+      title: "Gamme Premium",
+      description: "Lubrifiants haut de gamme pour performances exceptionnelles"
     },
     {
       icon: Shield,
-      title: "Protection Extrême",
-      description: "Protection supérieure dans les conditions extrêmes"
+      title: "Protection Supérieure",
+      description: "Protection maximale et longévité du moteur"
     },
     {
       icon: Zap,
-      title: "Technologie Synthétique",
-      description: "Formules synthétiques et semi-synthétiques avancées"
+      title: "Technologie Premium",
+      description: "Formules 100% synthétiques haute performance"
     },
     {
       icon: Award,
-      title: "Normes Européennes",
-      description: "Conforme aux standards Euro et constructeurs"
+      title: "Excellence Certifiée",
+      description: "Normes les plus strictes des constructeurs premium"
     }
   ];
 
   const benefits = [
-    "Lubrifiants synthétiques et semi-synthétiques",
-    "Économie de carburant optimisée",
-    "Protection moteur dans conditions extrêmes",
-    "Intervalles de vidange prolongés",
-    "Démarrage à froid facile",
-    "Normes API, ACEA et constructeurs européens"
+    "Lubrifiants 100% synthétiques premium",
+    "Performance exceptionnelle toutes conditions",
+    "Protection moteur haute technologie",
+    "Économies de carburant optimisées",
+    "Intervalles de vidange étendus",
+    "Compatible véhicules haut de gamme"
   ];
 
   return (
@@ -71,8 +77,8 @@ export default function PoidsLourds() {
       <section className="relative bg-gradient-to-br from-[#02173C] to-[#02173C]/90 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80" 
-            alt="Poids Lourds"
+            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=80" 
+            alt="Premium Line Vehicules"
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#02173C]/80 to-[#02173C]/60"></div>
@@ -96,26 +102,28 @@ export default function PoidsLourds() {
               Produits
             </Link>
             <ChevronRight size={16} className="text-gray-400" />
-            <span className="text-[#BE941B] font-medium">Poids Lourds</span>
+            <span className="text-gray-300">Premium Line</span>
+            <ChevronRight size={16} className="text-gray-400" />
+            <span className="text-[#BE941B] font-medium">Véhicules</span>
           </nav>
 
           <div className="text-center">
             <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-8 py-3 mb-8">
-              <Truck className="w-5 h-5 text-[#BE941B] mr-2" />
-              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Heavy Duty</span>
+              <Crown className="w-5 h-5 text-[#BE941B] mr-2" />
+              <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Premium Line</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              <span className="block">Poids</span>
-              <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">Lourds</span>
+              <span className="block">Véhicules</span>
+              <span className="block bg-gradient-to-r from-[#BE941B] to-white bg-clip-text text-transparent">Premium</span>
             </h1>
             
             <div className="w-32 h-1 bg-gradient-to-r from-[#BE941B] via-white to-[#BE941B] mx-auto mb-8 rounded-full"></div>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Lubrifiants haute performance pour véhicules commerciaux et poids lourds.
+              Lubrifiants premium haute performance pour véhicules haut de gamme.
               <br />
-              <span className="text-[#BE941B] font-medium">Protection et fiabilité pour les conditions les plus exigeantes.</span>
+              <span className="text-[#BE941B] font-medium">Excellence et performance exceptionnelle garanties.</span>
             </p>
           </div>
         </div>
@@ -155,24 +163,19 @@ export default function PoidsLourds() {
           
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#02173C] mb-6">
-              Gamme <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Poids Lourds</span>
+              Gamme <span className="bg-gradient-to-r from-[#BE941B] to-[#02173C] bg-clip-text text-transparent">Premium Line</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#BE941B] to-[#02173C] mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Lubrifiants spécialisés pour véhicules commerciaux et moteurs diesel lourds
+              Lubrifiants premium haute performance pour véhicules haut de gamme et de luxe
             </p>
           </div>
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {poidsLourdsProducts.map((product, index) => (
-              <Link key={product.id} to={`/produits/poids-lourds/${product.id}`} className="group cursor-pointer">
+            {premiumProducts.map((product, index) => (
+              <Link key={product.id} to={`/produits/premium-line/vehicules/${product.id}`} className="group cursor-pointer">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
-
-                  {/* Product Code */}
-                  <div className="bg-gradient-to-r from-[#BE941B] to-[#02173C] text-white text-center py-3 px-4">
-                    <span className="font-bold text-sm uppercase tracking-widest">Code: {product.code}</span>
-                  </div>
 
                   {/* Product Image */}
                   <div className="aspect-square relative bg-white p-4">
@@ -183,7 +186,7 @@ export default function PoidsLourds() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-
+                  
                   {/* Product Info */}
                   <div className="p-6 text-center">
                     <h1 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
@@ -216,12 +219,12 @@ export default function PoidsLourds() {
             {/* Left - Benefits List */}
             <div className="text-white">
               <div className="inline-flex items-center bg-[#BE941B]/20 border border-[#BE941B]/30 rounded-full px-6 py-2 mb-8">
-                <Truck className="w-4 h-4 text-[#BE941B] mr-2" />
-                <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Avantages Poids Lourds</span>
+                <Crown className="w-4 h-4 text-[#BE941B] mr-2" />
+                <span className="text-[#BE941B] font-bold text-sm uppercase tracking-widest">Avantages Premium</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-                Performance <span className="text-[#BE941B]">Heavy Duty</span>
+                Excellence <span className="text-[#BE941B]">Premium</span>
               </h2>
               
               <div className="w-24 h-1 bg-[#BE941B] mb-8 rounded-full"></div>
@@ -239,7 +242,7 @@ export default function PoidsLourds() {
               
               <button className="group bg-[#BE941B] hover:bg-white px-8 py-4 text-white hover:text-[#02173C] transition-all duration-300 font-bold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 <span className="flex items-center">
-                  Découvrir la Gamme
+                  Découvrir la Gamme Premium
                   <ArrowRight size={20} className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </button>
@@ -249,8 +252,8 @@ export default function PoidsLourds() {
             <div className="relative">
               <div className="aspect-square relative overflow-hidden rounded-3xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80"
-                  alt="Poids Lourds" 
+                  src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80"
+                  alt="Premium Line Vehicules" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#BE941B]/20 to-transparent"></div>
@@ -260,10 +263,10 @@ export default function PoidsLourds() {
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-2xl border border-gray-100">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-[#BE941B]/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <Truck className="w-6 h-6 text-[#BE941B]" />
+                    <Crown className="w-6 h-6 text-[#BE941B]" />
                   </div>
-                  <p className="text-[#02173C] font-bold text-sm">Performance</p>
-                  <p className="text-gray-600 text-xs">Heavy Duty</p>
+                  <p className="text-[#02173C] font-bold text-sm">Excellence</p>
+                  <p className="text-gray-600 text-xs">Niveau premium</p>
                 </div>
               </div>
             </div>

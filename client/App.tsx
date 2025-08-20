@@ -26,6 +26,11 @@ import ProfessionalLineVehicules from "./pages/categories/ProfessionalLineVehicu
 import MultigradeLineVehicules from "./pages/categories/MultigradeLineVehicules";
 import PoidsLourds from "./pages/categories/PoidsLourds";
 import CompetitionProductDetail from "./pages/categories/ProductDetail";
+import PremiumLineVehicules from "./pages/categories/PremiumLineVehicules";
+import MultigradeProductDetail from "./pages/categories/MultigradeProductDetail";
+import MotoSeaEngines from "./pages/categories/MotoSeaEngines";
+import MotoSeaEnginesProductDetail from "./pages/categories/MotoSeaEnginesProductDetail";
+import PoidsLourdsProductDetail from "./pages/categories/PoidsLourdsProductDetail";
 
 const queryClient = new QueryClient();
 
@@ -50,16 +55,19 @@ const App = () => (
           <Route path="/produits/professional-line/vehicules" element={<ProfessionalLineVehicules />} />
           <Route path="/produits/professional-line/vehicules/:productId" element={<CompetitionProductDetail />} />
           {/* Premium Line Routes */}
-          <Route path="/produits/premium-line/vehicules" element={<div>Premium Line Vehicules</div>} />
+          <Route path="/produits/premium-line/vehicules" element={<PremiumLineVehicules />} />
+          <Route path="/produits/premium-line/vehicules/:productId" element={<CompetitionProductDetail />} />
           {/* Multigrade Line Routes */}
           <Route path="/produits/multigrade-line/vehicules" element={<MultigradeLineVehicules />} />
-          <Route path="/produits/multigrade-line/vehicules/:productId" element={<CompetitionProductDetail />} />
+          <Route path="/produits/multigrade-line/vehicules/:productId" element={<MultigradeProductDetail />} />
           {/* Huile et Additifs pour Freins Routes (Main category with subcategories) */}
           <Route path="/produits/huile-additifs-freins/huile-frein-additifs" element={<div>Huile de Frein et Additifs</div>} />
           <Route path="/produits/huile-additifs-freins/additifs-produits-chimiques" element={<div>Additifs et Produits Chimiques</div>} />
           {/* Standalone Category Routes */}
           <Route path="/produits/poids-lourds" element={<PoidsLourds />} />
-          <Route path="/produits/moto-sea-engines" element={<div>Moto and Sea Engines</div>} />
+          <Route path="/produits/poids-lourds/:productId" element={<PoidsLourdsProductDetail />} />
+          <Route path="/produits/moto-sea-engines" element={<MotoSeaEngines />} />
+          <Route path="/produits/moto-sea-engines/:productId" element={<MotoSeaEnginesProductDetail />} />
           <Route path="/produits/lubrifiants-industriels" element={<div>Lubrifiants Industriels</div>} />
           <Route path="/produits/machines-agricoles" element={<div>Machines Agricoles</div>} />
           <Route path="/produits/boites-automatiques" element={<div>Boites Automatiques</div>} />

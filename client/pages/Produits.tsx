@@ -4,107 +4,73 @@ import { Link } from "react-router-dom";
 import { Trophy, Car, Bike, Ship, Factory, Truck, Cog, Droplets, Wrench, Award, Clock, Shield, ArrowRight, MapPin } from "lucide-react";
 
 export default function Produits() {
-  const productCategories = [
-    // COMPETITION LINE
+  // Flattened categories with combined titles
+  const allProductCategories = [
+    // Competition Line categories
     {
-      title: "COMPETITION LINE",
-      isMainCategory: true,
-      image: "https://images.pexels.com/photos/2712852/pexels-photo-2712852.jpeg",
-      subcategories: [
-        {
-          title: "VEHICULES",
-          path: "/produits/competition-line/vehicules",
-          image: "https://images.pexels.com/photos/2712852/pexels-photo-2712852.jpeg"
-        },
-        {
-          title: "MOTO",
-          path: "/produits/competition-line/moto",
-          image: "https://images.pexels.com/photos/33433467/pexels-photo-33433467.jpeg"
-        },
-        {
-          title: "MOTOS ET MOTEURS MARINS",
-          path: "/produits/competition-line/motos-moteurs-marins",
-          image: "https://images.pexels.com/photos/32386010/pexels-photo-32386010.jpeg"
-        }
-      ]
+      title: "COMPETITION LINE VEHICULES",
+      path: "/produits/competition-line/vehicules",
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fa80bb1fca4824fe2ad0500930d9067c7?format=webp&width=800"
     },
-    // PROFESSIONAL LINE
     {
-      title: "PROFESSIONAL LINE",
-      isMainCategory: true,
-      image: "https://images.pexels.com/photos/6872601/pexels-photo-6872601.jpeg",
-      subcategories: [
-        {
-          title: "VEHICULES",
-          path: "/produits/professional-line/vehicules",
-          image: "https://images.pexels.com/photos/6872601/pexels-photo-6872601.jpeg"
-        }
-      ]
+      title: "COMPETITION LINE MOTO",
+      path: "/produits/competition-line/moto",
+      image: "https://images.pexels.com/photos/33433467/pexels-photo-33433467.jpeg"
     },
-    // PREMIUM LINE
     {
-      title: "PREMIUM LINE",
-      isMainCategory: true,
-      image: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg",
-      subcategories: [
-        {
-          title: "VEHICULES",
-          path: "/produits/premium-line/vehicules",
-          image: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg"
-        }
-      ]
+      title: "COMPETITION LINE MOTOS MOTEURS MARINS",
+      path: "/produits/competition-line/motos-moteurs-marins",
+      image: "https://images.pexels.com/photos/163212/transport-port-boats-anchorage-163212.jpeg"
     },
-    // MULTIGRADE LINE
+    // Professional Line categories
     {
-      title: "MULTIGRADE LINE",
-      isMainCategory: true,
-      image: "https://images.pexels.com/photos/952338/pexels-photo-952338.jpeg",
-      subcategories: [
-        {
-          title: "VEHICULES",
-          path: "/produits/multigrade-line/vehicules",
-          image: "https://images.pexels.com/photos/952338/pexels-photo-952338.jpeg"
-        }
-      ]
+      title: "PROFESSIONAL LINE VEHICULES",
+      path: "/produits/professional-line/vehicules",
+      image: "https://images.pexels.com/photos/70912/pexels-photo-70912.jpeg"
     },
-    // HUILE ET ADDITIFS POUR FREINS (Main category with subcategories)
+    // Premium Line categories
     {
-      title: "HUILE ET ADDITIFS POUR FREINS",
-      isMainCategory: true,
-      image: "https://images.pexels.com/photos/30470930/pexels-photo-30470930.jpeg",
-      subcategories: [
-        {
-          title: "HUILE DE FREIN ET ADDITIFS",
-          path: "/produits/huile-additifs-freins/huile-frein-additifs",
-          image: "https://images.pexels.com/photos/30470930/pexels-photo-30470930.jpeg"
-        },
-        {
-          title: "ADDITIFS ET PRODUITS CHIMIQUES",
-          path: "/produits/huile-additifs-freins/additifs-produits-chimiques",
-          image: "https://images.pexels.com/photos/30470930/pexels-photo-30470930.jpeg"
-        }
-      ]
+      title: "PREMIUM LINE VEHICULES",
+      path: "/produits/premium-line/vehicules",
+      image: "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg"
     },
-    // Standalone categories (no subcategories)
+    // Multigrade Line categories
+    {
+      title: "MULTIGRADE LINE VEHICULES",
+      path: "/produits/multigrade-line/vehicules",
+      image: "https://images.pexels.com/photos/33519309/pexels-photo-33519309.jpeg"
+    },
+    // Huile et Additifs pour Freins categories
+    {
+      title: "HUILE DE FREIN ET ADDITIFS",
+      path: "/produits/huile-additifs-freins/huile-frein-additifs",
+      image: "https://images.pexels.com/photos/3642618/pexels-photo-3642618.jpeg"
+    },
+    {
+      title: "ADDITIFS ET PRODUITS CHIMIQUES",
+      path: "/produits/huile-additifs-freins/additifs-produits-chimiques",
+      image: "https://images.pexels.com/photos/4116171/pexels-photo-4116171.jpeg"
+    },
+    // Standalone categories
     {
       title: "POIDS LOURDS",
       path: "/produits/poids-lourds",
-      image: "https://images.pexels.com/photos/12784848/pexels-photo-12784848.jpeg"
+      image: "https://images.pexels.com/photos/7019371/pexels-photo-7019371.jpeg"
     },
     {
       title: "MOTO AND SEA ENGINES",
       path: "/produits/moto-sea-engines",
-      image: "https://images.pexels.com/photos/32386010/pexels-photo-32386010.jpeg"
+      image: "https://images.pexels.com/photos/30519983/pexels-photo-30519983.jpeg"
     },
     {
       title: "LUBRIFIANTS INDUSTRIELS",
       path: "/produits/lubrifiants-industriels",
-      image: "https://images.pexels.com/photos/33427061/pexels-photo-33427061.jpeg"
+      image: "https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg"
     },
     {
       title: "MACHINES AGRICOLES",
       path: "/produits/machines-agricoles",
-      image: "https://images.pexels.com/photos/2255801/pexels-photo-2255801.jpeg"
+      image: "https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg"
     },
     {
       title: "BOITES AUTOMATIQUES",
@@ -114,17 +80,17 @@ export default function Produits() {
     {
       title: "BOITE MANUELLE",
       path: "/produits/boite-manuelle",
-      image: "https://images.pexels.com/photos/5215655/pexels-photo-5215655.jpeg"
+      image: "https://images.pexels.com/photos/2986849/pexels-photo-2986849.jpeg"
     },
     {
       title: "ANTIGEL",
       path: "/produits/antigel",
-      image: "https://images.pexels.com/photos/13177819/pexels-photo-13177819.jpeg"
+      image: "https://images.pexels.com/photos/20710361/pexels-photo-20710361.jpeg"
     },
     {
       title: "GRAISSE",
       path: "/produits/graisse",
-      image: "https://images.pexels.com/photos/7564871/pexels-photo-7564871.jpeg"
+      image: "https://images.pexels.com/photos/4116171/pexels-photo-4116171.jpeg"
     }
   ];
 
@@ -241,88 +207,30 @@ export default function Produits() {
             </p>
           </div>
 
-          {/* Product Categories Grid */}
-          <div className="space-y-16 max-w-7xl mx-auto">
-            {/* Main categories with subcategories */}
-            {productCategories
-              .filter(category => category.isMainCategory && category.subcategories)
-              .map((category, index) => (
-                <div key={index} className="space-y-8">
-                  <div className="text-center">
-                    <h3 className="text-2xl md:text-3xl font-black text-[#02173C] mb-4">
-                      {category.title}
-                    </h3>
+          {/* Single Unified Grid 4x4 */}
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {allProductCategories.map((category, index) => (
+                <Link key={index} to={category.path} className="group cursor-pointer">
+                  <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 overflow-hidden border border-gray-100">
+                    {/* Full Image */}
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img
+                        src={category.image}
+                        alt={category.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Title */}
+                    <div className="p-6 text-center">
+                      <h3 className="text-lg font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide leading-tight">
+                        {category.title}
+                      </h3>
+                    </div>
                   </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {category.subcategories.map((subcategory, subIndex) => (
-                      <Link key={subIndex} to={subcategory.path} className="group cursor-pointer">
-                        <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 overflow-hidden border border-gray-100">
-                          {/* Full Image */}
-                          <div className="aspect-[4/3] overflow-hidden">
-                            <img
-                              src={subcategory.image}
-                              alt={subcategory.title}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                          </div>
-
-                          {/* Title */}
-                          <div className="p-6 text-center">
-                            <h4 className="text-xl font-black text-[#02173C] mb-4 group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
-                              {subcategory.title}
-                            </h4>
-
-                            {/* Découvrir Button */}
-                            <button className="bg-[#BE941B] hover:bg-[#02173C] text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 transform group-hover:scale-105 shadow-lg hover:shadow-xl">
-                              DÉCOUVRIR
-                            </button>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                </Link>
               ))}
-
-            {/* All categories in a unified grid */}
-            <div>
-              <div className="text-center mb-12">
-                <h3 className="text-2xl md:text-3xl font-black text-[#02173C] mb-4">
-                  Toutes nos Catégories
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                {productCategories
-                  .filter(category => !category.isMainCategory)
-                  .map((category, index) => (
-                    <Link key={index} to={category.path} className="group cursor-pointer">
-                      <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 overflow-hidden border border-gray-100">
-                        {/* Full Image */}
-                        <div className="aspect-[4/3] overflow-hidden">
-                          <img
-                            src={category.image}
-                            alt={category.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
-                        </div>
-
-                        {/* Title */}
-                        <div className="p-6 text-center">
-                          <h3 className="text-lg font-black text-[#02173C] mb-4 group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
-                            {category.title}
-                          </h3>
-
-                          {/* Découvrir Button */}
-                          <button className="bg-[#BE941B] hover:bg-[#02173C] text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 transform group-hover:scale-105 shadow-lg hover:shadow-xl">
-                            DÉCOUVRIR
-                          </button>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-              </div>
             </div>
           </div>
         </div>
