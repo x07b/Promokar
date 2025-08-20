@@ -10,87 +10,87 @@ export default function Produits() {
     {
       title: "COMPETITION LINE VEHICULES",
       path: "/produits/competition-line/vehicules",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fa80bb1fca4824fe2ad0500930d9067c7?format=webp&width=800"
+      image: "https://images.pexels.com/photos/2712852/pexels-photo-2712852.jpeg"
     },
     {
       title: "COMPETITION LINE MOTO",
       path: "/produits/competition-line/moto",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fe2ed82f897c94d23918320cee922d255?format=webp&width=800"
+      image: "https://images.pexels.com/photos/4534221/pexels-photo-4534221.jpeg"
     },
     {
       title: "COMPETITION LINE MOTOS MOTEURS MARINS",
       path: "/produits/competition-line/motos-moteurs-marins",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F25ea035d7a95485abfb2535943b249bc?format=webp&width=800"
+      image: "https://images.pexels.com/photos/163212/transport-port-boats-anchorage-163212.jpeg"
     },
     // Professional Line categories
     {
       title: "PROFESSIONAL LINE VEHICULES",
       path: "/produits/professional-line/vehicules",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F15cfe440baff4b57bc637a69305d0178?format=webp&width=800"
+      image: "https://images.pexels.com/photos/70912/pexels-photo-70912.jpeg"
     },
     // Premium Line categories
     {
       title: "PREMIUM LINE VEHICULES",
       path: "/produits/premium-line/vehicules",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F24926bd727384ae5a39e8a7cf89e4793?format=webp&width=800"
+      image: "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg"
     },
     // Multigrade Line categories
     {
       title: "MULTIGRADE LINE VEHICULES",
       path: "/produits/multigrade-line/vehicules",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F0f881515469843f8bb243a88fead08f3?format=webp&width=800"
+      image: "https://images.pexels.com/photos/33519309/pexels-photo-33519309.jpeg"
     },
     // Huile et Additifs pour Freins categories
     {
       title: "HUILE DE FREIN ET ADDITIFS",
       path: "/produits/huile-additifs-freins/huile-frein-additifs",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F9e67a123dffe4dff888791f96a43e66d?format=webp&width=800"
+      image: "https://images.pexels.com/photos/3642618/pexels-photo-3642618.jpeg"
     },
     {
       title: "ADDITIFS ET PRODUITS CHIMIQUES",
       path: "/produits/huile-additifs-freins/additifs-produits-chimiques",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fa80bb1fca4824fe2ad0500930d9067c7?format=webp&width=800"
+      image: "https://images.pexels.com/photos/4116171/pexels-photo-4116171.jpeg"
     },
     // Standalone categories
     {
       title: "POIDS LOURDS",
       path: "/produits/poids-lourds",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fe2ed82f897c94d23918320cee922d255?format=webp&width=800"
+      image: "https://images.pexels.com/photos/7019371/pexels-photo-7019371.jpeg"
     },
     {
       title: "MOTO AND SEA ENGINES",
       path: "/produits/moto-sea-engines",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F25ea035d7a95485abfb2535943b249bc?format=webp&width=800"
+      image: "https://images.pexels.com/photos/4534221/pexels-photo-4534221.jpeg"
     },
     {
       title: "LUBRIFIANTS INDUSTRIELS",
       path: "/produits/lubrifiants-industriels",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F15cfe440baff4b57bc637a69305d0178?format=webp&width=800"
+      image: "https://images.pexels.com/photos/1145434/pexels-photo-1145434.jpeg"
     },
     {
       title: "MACHINES AGRICOLES",
       path: "/produits/machines-agricoles",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F24926bd727384ae5a39e8a7cf89e4793?format=webp&width=800"
+      image: "https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg"
     },
     {
       title: "BOITES AUTOMATIQUES",
       path: "/produits/boites-automatiques",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F0f881515469843f8bb243a88fead08f3?format=webp&width=800"
+      image: "https://images.pexels.com/photos/2986849/pexels-photo-2986849.jpeg"
     },
     {
       title: "BOITE MANUELLE",
       path: "/produits/boite-manuelle",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2F9e67a123dffe4dff888791f96a43e66d?format=webp&width=800"
+      image: "https://images.pexels.com/photos/2986849/pexels-photo-2986849.jpeg"
     },
     {
       title: "ANTIGEL",
       path: "/produits/antigel",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fa80bb1fca4824fe2ad0500930d9067c7?format=webp&width=800"
+      image: "https://images.pexels.com/photos/20710361/pexels-photo-20710361.jpeg"
     },
     {
       title: "GRAISSE",
       path: "/produits/graisse",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fe2ed82f897c94d23918320cee922d255?format=webp&width=800"
+      image: "https://images.pexels.com/photos/4116171/pexels-photo-4116171.jpeg"
     }
   ];
 
