@@ -10,7 +10,7 @@ export default function Produits() {
     {
       title: "COMPETITION LINE VEHICULES",
       path: "/produits/competition-line/vehicules",
-      image: "https://images.pexels.com/photos/2712852/pexels-photo-2712852.jpeg"
+      image: "https://cdn.builder.io/api/v1/image/assets%2F367800b539f442f7b8aca37c33d3b377%2Fa80bb1fca4824fe2ad0500930d9067c7?format=webp&width=800"
     },
     {
       title: "COMPETITION LINE MOTO",
