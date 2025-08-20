@@ -168,7 +168,12 @@ export default function PoidsLourds() {
             {poidsLourdsProducts.map((product, index) => (
               <Link key={product.id} to={`/produits/poids-lourds/${product.id}`} className="group cursor-pointer">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100">
-                  
+
+                  {/* Product Code */}
+                  <div className="bg-gradient-to-r from-[#BE941B] to-[#02173C] text-white text-center py-3 px-4">
+                    <span className="font-bold text-sm uppercase tracking-widest">Code: {product.code}</span>
+                  </div>
+
                   {/* Product Image */}
                   <div className="aspect-square relative bg-white p-4">
                     <img
@@ -178,7 +183,7 @@ export default function PoidsLourds() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#02173C]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  
+
                   {/* Product Info */}
                   <div className="p-6 text-center">
                     <h1 className="text-xl font-black text-[#02173C] group-hover:text-[#BE941B] transition-colors duration-300 uppercase tracking-wide">
