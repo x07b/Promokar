@@ -209,7 +209,7 @@ export default function Produits() {
 
           {/* Single Unified Grid 4x4 */}
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {allProductCategories.map((category, index) => (
                 <Link key={index} to={category.path} className="group cursor-pointer">
                   <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 overflow-hidden border border-gray-100">
