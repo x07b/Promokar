@@ -30,6 +30,7 @@ import PremiumLineVehicules from "./pages/categories/PremiumLineVehicules";
 import MultigradeProductDetail from "./pages/categories/MultigradeProductDetail";
 import MotoSeaEngines from "./pages/categories/MotoSeaEngines";
 import MotoSeaEnginesProductDetail from "./pages/categories/MotoSeaEnginesProductDetail";
+import PoidsLourdsProductDetail from "./pages/categories/PoidsLourdsProductDetail";
 
 const queryClient = new QueryClient();
 
